@@ -9,7 +9,7 @@ The following contributors have participated in this project:
 - [Luise Donat](https://github.com/luisedonat)
 - [Melanie Kitze](https://github.com/EmlMeml) - 12258153
 - [Simon Rödig](https://github.com/simonroedig) - 12297110
-- [Sara Ruckstuhl](https://github.com/Ruckster00)
+- [Sara Ruckstuhl](https://github.com/Ruckster00) - 12277953
 - [Mario Sögtrop](https://github.com/msoeg) - 11592396
 
 ## Description
