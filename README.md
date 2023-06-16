@@ -4,13 +4,13 @@ This repository contains the Unity project of group 2 for the course "Multimedia
 
 ## Contributors
 
-The following contributors have participated in this project (sorted alphabetically by last name):
+The following contributors have participated in this project:
 
-- Luise Donat
-- Melanie Kitze - 12258153
-- Simon Rödig - 12297110
-- Sara Ruckstuhl
-- Mario Sögtrop - 11592396
+- [Luise Donat](https://github.com/luisedonat)
+- [Melanie Kitze](https://github.com/EmlMeml) - 12258153
+- [Simon Rödig](https://github.com/simonroedig) - 12297110
+- [Sara Ruckstuhl](https://github.com/Ruckster00)
+- [Mario Sögtrop](https://github.com/msoeg) - 11592396
 
 ## Description
 
