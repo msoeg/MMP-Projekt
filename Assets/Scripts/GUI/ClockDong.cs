@@ -7,7 +7,6 @@ public class ClockDong : MonoBehaviour
 
     private float timer = 0f;
     private bool forward = true;
-    private float minute = 10f;
 
     void Update()
     {
