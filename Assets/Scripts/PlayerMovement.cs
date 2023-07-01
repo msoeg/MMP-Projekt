@@ -8,9 +8,9 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
     public float moveSpeed = 0.1f;
-    private GameObject room;
 
     private bool canPressKey;
+    private string stair_type = "";
 
     void Start()
     {
@@ -26,14 +26,14 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal * moveSpeed * Time.deltaTime, 0, 0);
         transform.position += movement;
         
-        if (canPressKey)
+        if (canPressKey && !stair_type.Equals(""))
         {
-            if (Input.GetKeyDown(KeyCode.W) && transform.position.y < 0)
+            if (Input.GetKeyDown(KeyCode.W) && stair_type.Equals("StairUp"))
             {
                 Vector3 goUp = new Vector3(0, 3, 0);
                 transform.position += goUp;
             }
-            else if (Input.GetKeyDown(KeyCode.S)&& transform.position.y > -5)
+            else if (Input.GetKeyDown(KeyCode.S)&& stair_type.Equals(("StairDown")))
             {
                 Vector3 goDown = new Vector3(0, -3, 0);
                 transform.position += goDown;
@@ -44,17 +44,29 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Stairs"))
+        if (other.CompareTag("StairUp"))
         {
             canPressKey = true;
+            stair_type = "StairUp";
+            Debug.Log("Can press key");
+        } else if (other.CompareTag("StairDown"))
+        {
+            canPressKey = true;
+            stair_type = "StairDown";
             Debug.Log("Can press key");
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Stairs"))
+        if (other.CompareTag("StairUp"))
         {
+            stair_type = "StairUp";
+            canPressKey = false;
+            Debug.Log("Can't press key");
+        } else if (other.CompareTag("StairDown"))
+        {
+            stair_type = "StairDown";
             canPressKey = false;
             Debug.Log("Can't press key");
         }
