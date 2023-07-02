@@ -26,17 +26,22 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal * moveSpeed * Time.deltaTime, 0, 0);
         transform.position += movement;
         
-        if (canPressKey && !stair_type.Equals(""))
+        if (canPressKey)
         {
-            if (Input.GetKeyDown(KeyCode.W) && stair_type.Equals("StairUp"))
+            if (stair_type.Equals("StairUp"))
             {
-                Vector3 goUp = new Vector3(0, 3, 0);
-                transform.position += goUp;
-            }
-            else if (Input.GetKeyDown(KeyCode.S)&& stair_type.Equals(("StairDown")))
+                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+                {
+                    Vector3 goUp = new Vector3(0, 3, 0);
+                    transform.position += goUp;
+                }
+            } else if (stair_type.Equals("StairDown"))
             {
-                Vector3 goDown = new Vector3(0, -3, 0);
-                transform.position += goDown;
+                if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+                {
+                    Vector3 goDown = new Vector3(0, -3, 0);
+                    transform.position += goDown;
+                }
             }
         }
         
