@@ -19,4 +19,9 @@ public class EventCounter : MonoBehaviour
     {
         eventCount--;
     }
+
+    public int GetEventCount()
+    {
+        return eventCount;
+    }
 }

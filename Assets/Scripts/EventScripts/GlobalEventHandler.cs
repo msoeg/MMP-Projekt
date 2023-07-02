@@ -34,12 +34,12 @@ public class GlobalEventHandler : MonoBehaviour
         GameObject randomObject = objectListToChoose[Random.Range(0, objectListToChoose.Length)];
 
         // Activate the event on the selected object
-        ObjectEventHandler eventHandler = randomObject.GetComponent<ObjectEventHandler>();
-        if (eventHandler != null)
+        ObjectEventHandler objectEventHandler = randomObject.GetComponent<ObjectEventHandler>();
+        if (objectEventHandler != null)
         {
-            if (!eventHandler.isEventActive)
+            if (!objectEventHandler.isEventActive)
             {
-                eventHandler.isEventActive = true;
+                objectEventHandler.SetEventActive();
                 Debug.Log("Set event of " + randomObject.name + " to True");
                 _eventCounter.IncrementCounter();
             }

@@ -69,4 +69,9 @@ public class ObjectEventHandler : MonoBehaviour
             Debug.Log("Player entered Trigger for " + gameObject.name);
         }
     }
+
+    public void SetEventActive()
+    {
+        isEventActive = true;
+    }
 }
