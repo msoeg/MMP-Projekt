@@ -7,6 +7,7 @@ public class ClockDong : MonoBehaviour
 
     private float timer = 0f;
     private bool forward = true;
+    private float speed = 1f;
 
     void Update()
     {
@@ -14,10 +15,10 @@ public class ClockDong : MonoBehaviour
 
         if (forward)
         {
-            float zRotation = Mathf.Lerp(-amplitude, amplitude, timer / 3f);
+            float zRotation = Mathf.Lerp(-amplitude, amplitude, timer / speed);
             transform.rotation = Quaternion.Euler(0f, 0f, zRotation);
 
-            if (timer >= 3f)
+            if (timer >= speed)
             {
                 forward = false;
                 timer = 0f;
@@ -25,10 +26,10 @@ public class ClockDong : MonoBehaviour
         }
         else
         {
-            float zRotation = Mathf.Lerp(amplitude, -amplitude, timer / 3f);
+            float zRotation = Mathf.Lerp(amplitude, -amplitude, timer / speed);
             transform.rotation = Quaternion.Euler(0f, 0f, zRotation);
 
-            if (timer >= 3f)
+            if (timer >= speed)
             {
                 forward = true;
                 timer = 0f;
