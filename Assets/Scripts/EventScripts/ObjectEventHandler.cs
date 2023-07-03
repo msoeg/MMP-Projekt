@@ -6,25 +6,25 @@ public class ObjectEventHandler : MonoBehaviour
     public Sprite activeSprite;
     public Sprite inactiveSprite;
 
-    private SpriteRenderer spriteRenderer;
-    private BoxCollider2D triggerCollider;
+    private SpriteRenderer _spriteRenderer;
+    private BoxCollider2D _triggerCollider;
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
 
         // Create a new BoxCollider2D component
-        triggerCollider = gameObject.AddComponent<BoxCollider2D>();
-        triggerCollider.isTrigger = true;
-        triggerCollider.enabled = false;
+        _triggerCollider = gameObject.AddComponent<BoxCollider2D>();
+        _triggerCollider.isTrigger = true;
+        _triggerCollider.enabled = false;
 
         // Set the size of the BoxCollider2D
-        triggerCollider.size = new Vector2(1f, 1f);
+        _triggerCollider.size = new Vector2(1f, 1f);
 
         // Initialize the sprite to the inactive sprite
-        if (spriteRenderer != null && inactiveSprite != null)
+        if (_spriteRenderer != null && inactiveSprite != null)
         {
-            spriteRenderer.sprite = inactiveSprite;
+            _spriteRenderer.sprite = inactiveSprite;
         }
     }
 
@@ -33,31 +33,31 @@ public class ObjectEventHandler : MonoBehaviour
         if (isEventActive)
         {
             // Activate the trigger collider if it's not enabled
-            if (!triggerCollider.enabled)
+            if (!_triggerCollider.enabled)
             {
-                triggerCollider.enabled = true;
+                _triggerCollider.enabled = true;
                 Debug.Log("Trigger box activated for " + gameObject.name);
             }
 
             // Change the sprite image to active sprite
-            if (spriteRenderer != null && activeSprite != null)
+            if (_spriteRenderer != null && activeSprite != null)
             {
-                spriteRenderer.sprite = activeSprite;
+                _spriteRenderer.sprite = activeSprite;
             }
         }
         else
         {
             // Deactivate the trigger collider if it's enabled
-            if (triggerCollider.enabled)
+            if (_triggerCollider.enabled)
             {
-                triggerCollider.enabled = false;
+                _triggerCollider.enabled = false;
                 Debug.Log("Trigger box deactivated for " + gameObject.name);
             }
 
             // Change the sprite image to inactive sprite
-            if (spriteRenderer != null && inactiveSprite != null)
+            if (_spriteRenderer != null && inactiveSprite != null)
             {
-                spriteRenderer.sprite = inactiveSprite;
+                _spriteRenderer.sprite = inactiveSprite;
             }
         }
     }
