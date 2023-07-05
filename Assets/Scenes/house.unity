@@ -4500,6 +4500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidbody: {fileID: 877437973}
   moveSpeed: 3
+  animator: {fileID: 877437977}
 --- !u!212 &877437975
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4578,7 +4579,7 @@ Animator:
   m_GameObject: {fileID: 877437971}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 56dd089227418b14189be8ebc3773b61, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

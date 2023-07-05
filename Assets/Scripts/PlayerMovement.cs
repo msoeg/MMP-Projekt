@@ -12,16 +12,20 @@ public class PlayerMovement : MonoBehaviour
     private bool canPressKey;
     private string stair_type = "";
 
+    public Animator animator;
+
     void Start()
     {
         myRigidbody.freezeRotation = true;
         myRigidbody.constraints = RigidbodyConstraints2D.FreezePositionY;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
+        animator.SetFloat("Horizontal", moveHorizontal);
 
         Vector3 movement = new Vector3(moveHorizontal * moveSpeed * Time.deltaTime, 0, 0);
         transform.position += movement;
