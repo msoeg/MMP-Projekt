@@ -39,6 +39,21 @@ To run the game locally, follow these steps:
 
 File -> Build and Run or Ctrl + B
 
+## How to run the game
+
+If you want to run the game locally without the build process, you have to start a local webserver. This can be done
+via different methods, here is one example:
+
+- Download and install Servez under following link: https://github.com/greggman/servez/releases/tag/v1.11.0
+- Choose build folder and set a Port to one of your liking (for example 8080)
+- Set following settings to True:
+  - Show Folder Listings
+  - Automatically show index.html
+  - Local Machine Only
+  - Set CORS headers
+  - Support Unity
+- Press Start, then Launch Browser
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as permitted by the license.
