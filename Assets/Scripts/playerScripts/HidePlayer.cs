@@ -13,6 +13,9 @@ public class HidePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.E)){
+            Debug.Log("Button E was pressed!");
+        }
+
     }
 }
