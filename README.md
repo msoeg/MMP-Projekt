@@ -35,6 +35,10 @@ To run the game locally, follow these steps:
 
 5. Once the project is loaded, you can explore and run the game within the Unity editor or build and deploy it to your preferred platform.
 
+## How to build the game
+
+File -> Build and Run or Ctrl + B
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as permitted by the license.
