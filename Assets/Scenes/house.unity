@@ -4653,7 +4653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidbody: {fileID: 877437973}
   moveSpeed: 3
-  capsuleCollider: {fileID: 0}
+  capsuleCollider: {fileID: 877437972}
   animator: {fileID: 877437977}
 --- !u!212 &877437975
 SpriteRenderer:
