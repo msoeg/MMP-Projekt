@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class newMelliScript : MonoBehaviour
+public class HidePlayer : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
