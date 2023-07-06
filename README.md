@@ -54,6 +54,8 @@ via different methods, here is one example:
   - Support Unity
 - Press Start, then Launch Browser
 
+Other methods can be found [here](https://stackoverflow.com/questions/62517962/how-do-i-run-a-local-unity-webgl-file-url-build).
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as permitted by the license.
