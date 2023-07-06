@@ -8,6 +8,8 @@ TagManager:
   - StairDown
   - Stairs
   - Eventable
+  - StairDiagUp
+  - StairDiagDown
   layers:
   - Default
   - TransparentFX

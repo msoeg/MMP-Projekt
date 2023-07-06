@@ -2085,6 +2085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 395467293}
   - component: {fileID: 395467294}
+  - component: {fileID: 395467295}
   m_Layer: 0
   m_Name: Leiter
   m_TagString: StairUp
@@ -2159,6 +2160,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &395467295
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395467292}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.085248075, y: -0.18388529}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.0955555, y: 0.85333335}
+    newSize: {x: 1.0955555, y: 0.85333335}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.17487563, y: 0.48556277}
+  m_EdgeRadius: 0
 --- !u!1 &402083060
 GameObject:
   m_ObjectHideFlags: 0
@@ -4060,6 +4087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 760614136}
   - component: {fileID: 760614135}
+  - component: {fileID: 760614137}
   m_Layer: 0
   m_Name: Leiter
   m_TagString: StairUp
@@ -4134,6 +4162,32 @@ Transform:
   m_Father: {fileID: 210413100}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &760614137
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760614134}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.07887983, y: -0.21764131}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.0955555, y: 0.85333335}
+    newSize: {x: 1.0955555, y: 0.85333335}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1840559, y: 0.41805074}
+  m_EdgeRadius: 0
 --- !u!1 &781145934
 GameObject:
   m_ObjectHideFlags: 0
@@ -4599,6 +4653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidbody: {fileID: 877437973}
   moveSpeed: 3
+  capsuleCollider: {fileID: 0}
   animator: {fileID: 877437977}
 --- !u!212 &877437975
 SpriteRenderer:
@@ -5156,6 +5211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 959621555}
   - component: {fileID: 959621556}
+  - component: {fileID: 959621557}
   m_Layer: 0
   m_Name: Leiter
   m_TagString: StairUp
@@ -5230,6 +5286,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &959621557
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959621554}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.08080512, y: -0.16727594}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.0955555, y: 0.85333335}
+    newSize: {x: 1.0955555, y: 0.85333335}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.17976794, y: 0.5187815}
+  m_EdgeRadius: 0
 --- !u!1 &970590613
 GameObject:
   m_ObjectHideFlags: 0
@@ -5243,7 +5325,7 @@ GameObject:
   - component: {fileID: 970590616}
   m_Layer: 0
   m_Name: Treppe_Collider
-  m_TagString: StairUp
+  m_TagString: StairDiagUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5530,7 +5612,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111267312}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.92, y: -5.03, z: 0}
+  m_LocalPosition: {x: -6.8, y: -5.07, z: 0}
   m_LocalScale: {x: 0.65766, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5563,7 +5645,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.118777946, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5574,7 +5656,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.2375559, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &1125683317
 GameObject:
@@ -6985,7 +7067,7 @@ GameObject:
   - component: {fileID: 1437503008}
   m_Layer: 0
   m_Name: Treppe_Collider
-  m_TagString: StairDown
+  m_TagString: StairDiagDown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7612,7 +7694,7 @@ GameObject:
   - component: {fileID: 1558357163}
   m_Layer: 0
   m_Name: Treppe_Collider
-  m_TagString: Untagged
+  m_TagString: StairDown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

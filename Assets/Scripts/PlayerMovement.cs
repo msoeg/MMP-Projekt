@@ -8,7 +8,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
     public float moveSpeed = 0.1f;
-
+    public CapsuleCollider2D capsuleCollider;
+    
     private bool canPressKey;
     private string stair_type = "";
 
@@ -18,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
     {
         myRigidbody.freezeRotation = true;
         myRigidbody.constraints = RigidbodyConstraints2D.FreezePositionY;
-
     }
 
     // Update is called once per frame
@@ -46,6 +46,20 @@ public class PlayerMovement : MonoBehaviour
                     Vector3 goDown = new Vector3(0, -3, 0);
                     transform.position += goDown;
                 }
+            } else if (stair_type.Equals("StairDiagUp"))
+            {
+                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+                {
+                    Vector3 goUp = new Vector3(3.5f,3f,0f);
+                    transform.position += goUp;
+                }
+            } else if (stair_type.Equals("StairDiagDown"))
+            {
+                if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+                {
+                    Vector3 goDown = new Vector3(-3.5f,-3f,0f);
+                    transform.position += goDown;
+                }
             }
         }
         
@@ -63,6 +77,16 @@ public class PlayerMovement : MonoBehaviour
             canPressKey = true;
             stair_type = "StairDown";
             Debug.Log("Can press key");
+        }else if (other.CompareTag("StairDiagUp"))
+        {
+            canPressKey = true;
+            stair_type = "StairDiagUp";
+            Debug.Log("Can press key");
+        }else if (other.CompareTag("StairDiagDown"))
+        {
+            canPressKey = true;
+            stair_type = "StairDiagDown";
+            Debug.Log("Can press key");
         }
     }
 
@@ -78,6 +102,16 @@ public class PlayerMovement : MonoBehaviour
             stair_type = "StairDown";
             canPressKey = false;
             Debug.Log("Can't press key");
-        }
+        } else if (other.CompareTag("StairDiagDown"))
+        {
+            stair_type = "StairDiagDown";
+            canPressKey = false;
+            Debug.Log("Can't press key");
+        } else if (other.CompareTag("StairDiagDown"))
+        {
+            stair_type = "StairDiagDown";
+            canPressKey = false;
+            Debug.Log("Can't press key");
+        } 
     }
 }
