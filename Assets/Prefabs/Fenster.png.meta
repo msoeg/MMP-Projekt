@@ -108,13 +108,13 @@ TextureImporter:
       name: Fenster_Klein_Ohne
       rect:
         serializedVersion: 2
-        x: 36
-        y: 1479
-        width: 915
-        height: 621
+        x: 334
+        y: 1615
+        width: 289
+        height: 426
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 0, z: 2, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -129,13 +129,13 @@ TextureImporter:
       name: Fenster_Klein_Mit
       rect:
         serializedVersion: 2
-        x: 1068
-        y: 1479
-        width: 915
-        height: 621
+        x: 1358
+        y: 1611
+        width: 289
+        height: 430
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 3, z: 2, w: 5}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -150,10 +150,10 @@ TextureImporter:
       name: Fenster_Gross_Ohne
       rect:
         serializedVersion: 2
-        x: 36
-        y: 779
-        width: 915
-        height: 621
+        x: 193
+        y: 911
+        width: 571
+        height: 449
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: Fenster_Gross_Mit
       rect:
         serializedVersion: 2
-        x: 1068
-        y: 779
-        width: 915
-        height: 621
+        x: 1219
+        y: 911
+        width: 571
+        height: 450
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,10 +192,10 @@ TextureImporter:
       name: Fenster_Rund_Ohne
       rect:
         serializedVersion: 2
-        x: 36
-        y: 79
-        width: 915
-        height: 621
+        x: 194
+        y: 93
+        width: 570
+        height: 569
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,10 +213,10 @@ TextureImporter:
       name: Fenster_Rund_Mit
       rect:
         serializedVersion: 2
-        x: 1068
-        y: 79
-        width: 915
-        height: 621
+        x: 1219
+        y: 93
+        width: 569
+        height: 569
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
