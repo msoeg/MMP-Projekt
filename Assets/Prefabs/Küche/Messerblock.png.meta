@@ -109,9 +109,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 361
         width: 1300
-        height: 1300
+        height: 591
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,9 +130,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1300
-        y: 0
+        y: 357
         width: 1300
-        height: 1300
+        height: 596
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,6 +142,27 @@ TextureImporter:
       bones: []
       spriteID: 9040ccd7c8e1cf344846101dee3badc5
       internalID: -673634621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Messerblock_2
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 357
+        width: 1300
+        height: 596
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6668171e241369b40bd3bf271567a9c2
+      internalID: -2134801651
       vertices: []
       indices: 
       edges: []
@@ -159,6 +180,7 @@ TextureImporter:
     nameFileIdTable:
       Messerblock_0: -2134857971
       Messerblock_1: -673634621
+      Messerblock_2: -2134801651
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -108,10 +108,10 @@ TextureImporter:
       name: Computer_off
       rect:
         serializedVersion: 2
-        x: 0
-        y: 150
-        width: 250
-        height: 150
+        x: 88
+        y: 173
+        width: 87
+        height: 110
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,10 +129,10 @@ TextureImporter:
       name: Computer_on1
       rect:
         serializedVersion: 2
-        x: 250
-        y: 150
-        width: 250
-        height: 150
+        x: 349
+        y: 173
+        width: 87
+        height: 110
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +150,10 @@ TextureImporter:
       name: Computer_on2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 250
-        height: 150
+        x: 88
+        y: 17
+        width: 87
+        height: 110
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: Computer_on3
       rect:
         serializedVersion: 2
-        x: 250
-        y: 0
-        width: 250
-        height: 150
+        x: 349
+        y: 17
+        width: 87
+        height: 110
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
