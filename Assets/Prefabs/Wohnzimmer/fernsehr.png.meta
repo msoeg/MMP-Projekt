@@ -108,10 +108,10 @@ TextureImporter:
       name: fernseher_off
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 765.3333
-        height: 1296
+        x: 158
+        y: 441
+        width: 470
+        height: 534
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,10 +129,10 @@ TextureImporter:
       name: fernseher_on1
       rect:
         serializedVersion: 2
-        x: 765
-        y: 0
-        width: 765.3333
-        height: 1296
+        x: 934
+        y: 441
+        width: 471
+        height: 534
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +150,10 @@ TextureImporter:
       name: fernseher_on2
       rect:
         serializedVersion: 2
-        x: 1530
-        y: 0
-        width: 765.3333
-        height: 1296
+        x: 1696
+        y: 441
+        width: 471
+        height: 534
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
