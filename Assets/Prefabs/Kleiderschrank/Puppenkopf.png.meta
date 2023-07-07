@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Puppenkopf_oben
+      name: Puppenkopf_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1249
-        height: 1200
+        width: 1248
+        height: 1113
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47c2ca41de641d347977310237c1dd58
-      internalID: 1378448521
+      spriteID: 35da6c0b0fc54fc46913e0ce3897dad4
+      internalID: 134064426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Puppenkopf_unten
+      name: Puppenkopf_1
       rect:
         serializedVersion: 2
-        x: 1249
+        x: 1248
         y: 0
         width: 1249
-        height: 1200
+        height: 1113
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a759eec31274fd742977c15d4c8aae67
-      internalID: 1529097445
+      spriteID: 0868683b247ed504a93cb963870327f0
+      internalID: -1157459144
       vertices: []
       indices: 
       edges: []
@@ -157,8 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Puppenkopf_oben: 1378448521
-      Puppenkopf_unten: 1529097445
+      Puppenkopf_0: 134064426
+      Puppenkopf_1: -1157459144
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
