@@ -105,55 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fenster_Klein_Ohne
+      name: Fenster_0
       rect:
         serializedVersion: 2
         x: 334
-        y: 1615
-        width: 289
-        height: 426
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 2, y: 0, z: 2, w: 3}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a92bdf4d59435b43907093d340d2452
-      internalID: -1001178032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fenster_Klein_Mit
-      rect:
-        serializedVersion: 2
-        x: 1358
-        y: 1611
-        width: 289
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 2, y: 3, z: 2, w: 5}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6f183a6899fb6594e80bfead3a94bd68
-      internalID: 27843090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fenster_Gross_Ohne
-      rect:
-        serializedVersion: 2
-        x: 193
-        y: 911
-        width: 571
-        height: 449
+        y: 1612
+        width: 288
+        height: 428
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,17 +119,38 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41d0c5d91041d1e4db999d8d73afe9f9
-      internalID: -1495721861
+      spriteID: 18d03a2c05a8bcb4aa683a7bade022ae
+      internalID: 1280742957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fenster_Gross_Mit
+      name: Fenster_1
       rect:
         serializedVersion: 2
-        x: 1219
+        x: 1360
+        y: 1611
+        width: 289
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00976875842937409c340e3b595f0b4
+      internalID: 231783005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fenster_2
+      rect:
+        serializedVersion: 2
+        x: 193
         y: 911
         width: 571
         height: 450
@@ -182,19 +161,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f85e1fb70c7ad4e4eabe06e854379c94
-      internalID: -1258490704
+      spriteID: 5337b984ac6ead344934cb327a97bc63
+      internalID: 592126344
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fenster_Rund_Ohne
+      name: Fenster_3
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 911
+        width: 570
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798506ce8714ac647bd234f3c98817f9
+      internalID: 1063348892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fenster_4
       rect:
         serializedVersion: 2
         x: 194
         y: 93
-        width: 570
+        width: 569
         height: 569
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 279c622976afd264d8b542f1b3d285e2
-      internalID: 280170191
+      spriteID: b7d31d30146bb5c4aa3844c3856252d2
+      internalID: 97534084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fenster_Rund_Mit
+      name: Fenster_5
       rect:
         serializedVersion: 2
         x: 1219
@@ -224,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 973515fe78e39884293b849f75ff6d4d
-      internalID: 746912351
+      spriteID: db2fac02e926f4144b58966d9742e029
+      internalID: 1129071066
       vertices: []
       indices: 
       edges: []
@@ -241,12 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fenster_Gross_Mit: -1258490704
-      Fenster_Gross_Ohne: -1495721861
-      Fenster_Klein_Mit: 27843090
-      Fenster_Klein_Ohne: -1001178032
-      Fenster_Rund_Mit: 746912351
-      Fenster_Rund_Ohne: 280170191
+      Fenster_0: 1280742957
+      Fenster_1: 231783005
+      Fenster_2: 592126344
+      Fenster_3: 1063348892
+      Fenster_4: 97534084
+      Fenster_5: 1129071066
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
