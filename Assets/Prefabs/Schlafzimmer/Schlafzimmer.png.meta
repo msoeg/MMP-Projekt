@@ -101,6 +101,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -108,10 +120,10 @@ TextureImporter:
       name: Bett
       rect:
         serializedVersion: 2
-        x: 0
-        y: 648
-        width: 1248
-        height: 648
+        x: 275
+        y: 699
+        width: 588
+        height: 407
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 192, y: 0, z: 283, w: 155}
@@ -129,10 +141,10 @@ TextureImporter:
       name: Lampe
       rect:
         serializedVersion: 2
-        x: 1244
-        y: 811
-        width: 1252
-        height: 485
+        x: 1999
+        y: 848
+        width: 221
+        height: 274
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 705, y: 0, z: 238, w: 155}
@@ -150,10 +162,10 @@ TextureImporter:
       name: Beistelltisch
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1248
-        height: 648
+        x: 380
+        y: 125
+        width: 296
+        height: 380
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 355, y: 107, z: 540, w: 116}
@@ -171,10 +183,10 @@ TextureImporter:
       name: Stehspiegel
       rect:
         serializedVersion: 2
-        x: 1248
-        y: 0
-        width: 1034
-        height: 648
+        x: 1997
+        y: 129
+        width: 244
+        height: 476
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 704, y: 85, z: 0, w: 25}
