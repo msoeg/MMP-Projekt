@@ -8,13 +8,13 @@ public class RepairCounter : MonoBehaviour
 
     void Start()
     {
-        //eventCounter = GameObject.Find("EventCounterObject").GetComponent<EventCounter>();
+        eventCounter = GameObject.Find("EventCounterObject").GetComponent<EventCounter>();
 
     }
     void Update()
     {
-        //int count = eventCounter.GetEventCount();
-        //Debug.Log("Event count: " + count);
+        int count = eventCounter.GetEventCount();
+        Debug.Log("Event count: " + count);
 
     }
 }
