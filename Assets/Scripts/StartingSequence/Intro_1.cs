@@ -10,6 +10,8 @@ public class Intro_1 : MonoBehaviour
     public string[] lines;
     public float textSpeed;
 
+    public Sprite bored, happy; 
+
     private int index;
 
     void Start()
@@ -32,6 +34,15 @@ public class Intro_1 : MonoBehaviour
                 StopAllCoroutines();
                 textComponent.text = lines[index];
                 
+            }
+
+            if (textComponent.text == lines[0] || textComponent.text == lines[1] || textComponent.text == lines[2] || textComponent.text == lines[3])
+            {
+                GetComponent<SpriteRenderer>().sprite = happy;
+            }
+            if (textComponent.text == lines[4] || textComponent.text == lines[5] || textComponent.text == lines[6])
+            {
+                GetComponent<SpriteRenderer>().sprite = bored;
             }
         }
     }
