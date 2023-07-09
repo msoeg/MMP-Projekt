@@ -15,9 +15,10 @@ public class HidePlayer : MonoBehaviour
         if(player == null){
             player = GameObject.Find("Player");
             Debug.Log("new player Object: "+player.name);
+            playerRender = player.GetComponent<SpriteRenderer>();
+            Debug.Log(playerRender.name);
         } 
-        playerRender = player.GetComponent<SpriteRenderer>();
-        Debug.Log(playerRender.name);
+        
     }
 
     // Update is called once per frame
@@ -29,11 +30,13 @@ public class HidePlayer : MonoBehaviour
             Debug.Log("Player is hidden!");
             hidden = true;
             playerRender.enabled = false;
+            player.GetComponent<Rigidbody2D>().simulated = false;
             Debug.Log("Hidden: "+hidden);
         }else if(Input.GetKeyDown(KeyCode.E) && hidden == true){
             Debug.Log("Left Hidingspace!");
             hidden = false;
             playerRender.enabled = true;
+            player.GetComponent<Rigidbody2D>().simulated = true;
             Debug.Log("Hidden: "+hidden);
         }
         Debug.Log("After if-else");
