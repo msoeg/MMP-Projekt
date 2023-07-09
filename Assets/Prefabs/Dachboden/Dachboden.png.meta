@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Vase
+      name: Dachboden_Vase
       rect:
         serializedVersion: 2
         x: 359
@@ -114,24 +114,24 @@ TextureImporter:
         height: 282
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 440, z: 368, w: 492}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0ee34959baaee145a3a040539aa1c44
-      internalID: 609974988
+      spriteID: 66e973b0715ba484bbd0d1fdc82dcfa4
+      internalID: -287874358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Puppe1
+      name: Dachboden_Puppe1
       rect:
         serializedVersion: 2
-        x: 1088
+        x: 1092
         y: 0
-        width: 661
+        width: 668
         height: 1298
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 102ad65019a84e9429c719454ff5a227
-      internalID: -914681326
+      spriteID: 19152fb76b702c14586e798f48b430e8
+      internalID: 98036454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Puppe2
+      name: Dachboden_Puppe2
       rect:
         serializedVersion: 2
         x: 1961
@@ -161,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05716f0df7f09e040b5a2a591d748499
-      internalID: 1773537062
+      spriteID: 97e7efc0f19ac3146ac2039442622819
+      internalID: 2115058400
       vertices: []
       indices: 
       edges: []
@@ -178,9 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Puppe1: -914681326
-      Puppe2: 1773537062
-      Vase: 609974988
+      Dachboden_Puppe1: 98036454
+      Dachboden_Puppe2: 2115058400
+      Dachboden_Vase: -287874358
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
