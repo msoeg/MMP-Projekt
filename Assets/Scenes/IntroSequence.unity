@@ -581,11 +581,8 @@ MonoBehaviour:
   textComponent: {fileID: 780988571}
   lines:
   - 'What a loveley day. '
-  - The birds are singing, a gentle breeze is caressing my golden hair and the sun's
-    smiling upon me like I was the most beautiful creature she has ever seen.
-  - Which I probably am, hehe.
+  - The birds are singing, the sun's shining...
   - I could be at the beach right now, tanning my abs...
-  - Making all the girls swoon as they gaze upon my Herculean body...
   - But alas, duty calls.
   - 'As they say: "A real estate agent''s work is never done".'
   - '*sigh* With great power comes great responsibility, I guess...'
@@ -594,9 +591,9 @@ MonoBehaviour:
   - ...Well, looking at the state of it, there's really no wonder they would be hearing
     strange noises at night...
   - Probably caused by the wind. I mean, these walls are not exactly what you would
-    call airtight, haha.
+    call airtight.
   - ...
-  - Well, let's just have a quick look inside. At least then I can I was thorough.
+  - Well, let's just have a quick look inside. At least then I can say I was thorough...
   textSpeed: 0.05
 --- !u!1 &485050645
 GameObject:
