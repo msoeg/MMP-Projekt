@@ -8,7 +8,7 @@ public class RepairCounter : MonoBehaviour
     void Start()
     {
         GameObject otherObject = GameObject.Find("EventCounter");
-        OtherScript otherScriptComponent = otherObject.GetComponent<OtherScript>();
+        //OtherScript otherScriptComponent = otherObject.GetComponent<OtherScript>();
 
 
     }
@@ -16,6 +16,6 @@ public class RepairCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        EventCounter
+        //EventCounter;
     }
 }
