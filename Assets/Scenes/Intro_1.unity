@@ -621,6 +621,7 @@ MonoBehaviour:
   textSpeed: 0.05
   bored: {fileID: 21300000, guid: 91bcc330712191c49a21aef538b685d6, type: 3}
   happy: {fileID: 21300000, guid: 0ea2c05dca937dc46b406583652f586e, type: 3}
+  spriteRenderer: {fileID: 271947225}
 --- !u!1 &485050645
 GameObject:
   m_ObjectHideFlags: 0

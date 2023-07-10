@@ -10,7 +10,8 @@ public class Intro_1 : MonoBehaviour
     public string[] lines;
     public float textSpeed;
 
-    public Sprite bored, happy; 
+    public Sprite bored, happy;
+    public SpriteRenderer spriteRenderer;
 
     private int index;
 
@@ -18,7 +19,7 @@ public class Intro_1 : MonoBehaviour
     {
         textComponent.text = string.Empty;
         StartDialogue();
-        SceneManager.LoadScene("Intro_2");
+        //SceneManager.LoadScene("Intro_2");
     }
 
     void Update()
@@ -36,14 +37,11 @@ public class Intro_1 : MonoBehaviour
                 
             }
 
-            if (textComponent.text == lines[0] || textComponent.text == lines[1] || textComponent.text == lines[2] || textComponent.text == lines[3])
-            {
-                GetComponent<SpriteRenderer>().sprite = happy;
-            }
-            if (textComponent.text == lines[4] || textComponent.text == lines[5] || textComponent.text == lines[6])
-            {
-                GetComponent<SpriteRenderer>().sprite = bored;
-            }
+            if (index <= 3 || index > 6)
+                spriteRenderer.sprite = happy;
+            else
+                spriteRenderer.sprite = bored;
+            
         }
     }
     void StartDialogue()
