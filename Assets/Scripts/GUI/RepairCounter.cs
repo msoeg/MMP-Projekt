@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class RepairCounter : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private EventCounter eventCounter;
+
     void Start()
     {
-        GameObject otherObject = GameObject.Find("EventCounter");
-        //OtherScript otherScriptComponent = otherObject.GetComponent<OtherScript>();
-
+        eventCounter = GameObject.Find("EventCounterObject").GetComponent<EventCounter>();
 
     }
-
-    // Update is called once per frame
     void Update()
     {
-        //EventCounter;
+        int count = eventCounter.GetEventCount();
+        Debug.Log("Event count: " + count);
+
     }
 }
