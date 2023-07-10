@@ -10,6 +10,7 @@ TagManager:
   - Eventable
   - StairDiagUp
   - StairDiagDown
+  - HidingPlace
   layers:
   - Default
   - TransparentFX

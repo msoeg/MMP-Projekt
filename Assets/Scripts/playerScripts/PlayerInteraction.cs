@@ -38,4 +38,5 @@ public class PlayerInteraction : MonoBehaviour
             currentTrigger = null;
         }
     }
+
 }
