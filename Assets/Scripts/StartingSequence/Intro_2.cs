@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
-public class Dialogue : MonoBehaviour
+public class Intro_2 : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
+
+    public Sprite bored, happy;
+    public SpriteRenderer spriteRenderer;
 
     private int index;
 
@@ -15,6 +19,7 @@ public class Dialogue : MonoBehaviour
     {
         textComponent.text = string.Empty;
         StartDialogue();
+        //SceneManager.LoadScene("Intro_2");
     }
 
     void Update()
@@ -29,7 +34,11 @@ public class Dialogue : MonoBehaviour
             {
                 StopAllCoroutines();
                 textComponent.text = lines[index];
+
             }
+            
+            spriteRenderer.sprite = bored;
+
         }
     }
     void StartDialogue()
@@ -49,7 +58,7 @@ public class Dialogue : MonoBehaviour
 
     void NextLine()
     {
-        if (index < lines.Length-1)
+        if (index < lines.Length - 1)
         {
             index++;
             textComponent.text = string.Empty;
@@ -57,7 +66,8 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
+            SceneManager.LoadScene(3);
+
         }
     }
 }
