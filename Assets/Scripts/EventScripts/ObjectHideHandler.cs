@@ -20,18 +20,10 @@ public class ObjectHideHandler : MonoBehaviour
     void Start()
     {
         hidden = false;
-        
-
-        if(player == null){
-            player = GameObject.Find("Player");
-            Debug.Log("new player Object: "+player.name);
-            playerRender = player.GetComponent<SpriteRenderer>();
-            Debug.Log(playerRender.name);
-        } 
-        if(hidingPlace == null){
-            hidingPlace = this.gameObject;
-            Debug.Log(hidingPlace.name+ " has been found!");
-        }
+    
+        player = GameObject.Find("Player");
+        playerRender = player.GetComponent<SpriteRenderer>(); 
+        hidingPlace = this.gameObject;
         
         //Set Up Collider
         _triggerCollider = gameObject.AddComponent<BoxCollider2D>();
@@ -48,10 +40,16 @@ public class ObjectHideHandler : MonoBehaviour
 
         if (isEventActive)
         {
-            
+
+            // Activate the trigger collider if it's not enabled
+            if (!_triggerCollider.enabled)
+            {
+                _triggerCollider.enabled = true;
+                Debug.Log("Trigger box activated for " + gameObject.name);
+            }
+
             if(Input.GetKeyDown(KeyCode.E) && hidden == false)
             {
-
                     Debug.Log("Player is hidden!");
                     hidden = true;
                     playerRender.enabled = false;
@@ -70,6 +68,12 @@ public class ObjectHideHandler : MonoBehaviour
                 Debug.Log("Nope");
             }
         }else{
+            if (_triggerCollider.enabled)
+            {
+                _triggerCollider.enabled = false;
+                Debug.Log("Trigger box deactivated for " + gameObject.name);
+            }
+
             Debug.Log("Nope2");
         }
         
@@ -83,6 +87,8 @@ public class ObjectHideHandler : MonoBehaviour
         }
     }
 
-    
-    
+    public void SetEventActive()
+    {
+        isEventActive = true;
+    }
 }

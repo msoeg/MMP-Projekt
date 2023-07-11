@@ -5821,7 +5821,7 @@ GameObject:
   - component: {fileID: 877437975}
   - component: {fileID: 877437974}
   - component: {fileID: 877437978}
-  - component: {fileID: 877437979}
+  - component: {fileID: 877437981}
   - component: {fileID: 877437973}
   - component: {fileID: 877437972}
   - component: {fileID: 877437977}
@@ -6093,6 +6093,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &877437981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877437971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ec68c1a51fe1f4c9aca50d5ba308bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &884716338
 GameObject:
   m_ObjectHideFlags: 0
@@ -10793,6 +10805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1669699112}
   - component: {fileID: 1669699113}
+  - component: {fileID: 1669699114}
   m_Layer: 0
   m_Name: Badewanne
   m_TagString: Untagged
@@ -10808,7 +10821,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669699111}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.92157745, y: -11.167635, z: 0.068986304}
+  m_LocalPosition: {x: -0.866, y: -10.951, z: 0.068986304}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10867,6 +10880,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1669699114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669699111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e548b29de3b724ea89edb23df36ddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEventActive: 0
+  hidden: 0
+  player: {fileID: 0}
+  playerRender: {fileID: 0}
+  hidingPlace: {fileID: 0}
 --- !u!1 &1677637336
 GameObject:
   m_ObjectHideFlags: 0
@@ -11246,7 +11276,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1759749535}
   - component: {fileID: 1759749536}
-  - component: {fileID: 1759749538}
   - component: {fileID: 1759749539}
   m_Layer: 0
   m_Name: Couch
@@ -11322,32 +11351,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1759749538
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759749534}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4454721, y: 2.193182}
-    newSize: {x: 1.5939586, y: 2.7}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.4454721, y: 2.193182}
-  m_EdgeRadius: 0
 --- !u!114 &1759749539
 MonoBehaviour:
   m_ObjectHideFlags: 0

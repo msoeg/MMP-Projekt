@@ -15,7 +15,7 @@ public class HideInteraction : MonoBehaviour
         if (currentTrigger != null && Input.GetKeyDown(KeyCode.E))
         {
             currentTrigger.isEventActive = false;
-            Debug.Log("isEventActive set to False for " + currentTrigger.gameObject.name);
+            Debug.Log("isEventActive set to true for " + currentTrigger.gameObject.name);
         }
     }
 
@@ -26,7 +26,7 @@ public class HideInteraction : MonoBehaviour
         {
             currentTrigger = objectHideHandler;
         }
-        objectHideHandler.isEventActive = false;
+       
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -37,7 +37,7 @@ public class HideInteraction : MonoBehaviour
             currentTrigger = null;
         }
 
-        objectHideHandler.isEventActive = true;
+        
     }
 
 }
