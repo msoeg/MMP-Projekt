@@ -5,24 +5,22 @@ using UnityEngine;
 public class ObjectHideHandler : MonoBehaviour
 {
 
-    public bool isEventActive;
+    public bool isEventActiveHide;
     public bool hidden;
     public GameObject player;
-    public SpriteRenderer playerRender;
     public GameObject hidingPlace;
 
     private BoxCollider2D _triggerCollider;
-
+    public SpriteRenderer _playerRender;
    
 
 
     // Start is called before the first frame update
     void Start()
     {
-        hidden = false;
-    
+          
         player = GameObject.Find("Player");
-        playerRender = player.GetComponent<SpriteRenderer>(); 
+        _playerRender = player.GetComponent<SpriteRenderer>(); 
         hidingPlace = this.gameObject;
         
         //Set Up Collider
@@ -31,50 +29,48 @@ public class ObjectHideHandler : MonoBehaviour
         _triggerCollider.enabled = false;
 
         // Set the size of the BoxCollider2D
-        _triggerCollider.size = new Vector2(1f, 1f);
+        _triggerCollider.size = new Vector2(1f, 1.8f);
     }
 
     // Update is called once per frame
     void Update() 
     {
-
-        if (isEventActive)
+        Debug.Log(_triggerCollider.enabled+ " : Start Update()");
+        Debug.Log("## Object View isEventActiveHide: "+isEventActiveHide);
+        if (isEventActiveHide)
         {
 
+            Debug.Log(_triggerCollider.enabled+ " : if(isEventActiveHide())");
             // Activate the trigger collider if it's not enabled
             if (!_triggerCollider.enabled)
             {
                 _triggerCollider.enabled = true;
                 Debug.Log("Trigger box activated for " + gameObject.name);
             }
+            Debug.Log(_triggerCollider.enabled+ " : after first if"); 
 
-            if(Input.GetKeyDown(KeyCode.E) && hidden == false)
-            {
-                    Debug.Log("Player is hidden!");
-                    hidden = true;
-                    playerRender.enabled = false;
-                    player.GetComponent<Rigidbody2D>().simulated = false;
-                    player.GetComponent<PlayerMovement>().enabled = false;
-                    
-            }else if(Input.GetKeyDown(KeyCode.E) && hidden == true)
-            {
-                    Debug.Log("Left Hidingspace!");
-                    hidden = false;
-                    playerRender.enabled = true;
-                    player.GetComponent<Rigidbody2D>().simulated = true;
-                    player.GetComponent<PlayerMovement>().enabled = true;
+            Debug.Log("Hidden-State: "+hidden);
+            if(hidden == true)
+            { 
+                Debug.Log("Player is hidden!");
+                _playerRender.enabled = false;
+                Debug.Log("Renderer: "+_playerRender.enabled);
+                //player.GetComponent<CapsuleCollider2D>().enabled = false;
+                player.GetComponent<PlayerMovement>().enabled = false;
+                
                     
             }else{
-                Debug.Log("Nope");
+                Debug.Log("Left Hidingspace!");
+                _playerRender.enabled = true;
+                Debug.Log("Renderer: "+_playerRender.enabled);
+                //player.GetComponent<CapsuleCollider2D>().enabled = false;
+                player.GetComponent<PlayerMovement>().enabled = true;  
             }
-        }else{
-            if (_triggerCollider.enabled)
-            {
-                _triggerCollider.enabled = false;
-                Debug.Log("Trigger box deactivated for " + gameObject.name);
-            }
-
-            Debug.Log("Nope2");
+            
+        }
+        else
+        {
+              
         }
         
     }
@@ -87,8 +83,9 @@ public class ObjectHideHandler : MonoBehaviour
         }
     }
 
-    public void SetEventActive()
+
+    public void SetEventActiveHide()
     {
-        isEventActive = true;
+        isEventActiveHide = true;
     }
 }
