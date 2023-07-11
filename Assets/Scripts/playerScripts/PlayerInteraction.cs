@@ -5,17 +5,24 @@ public class PlayerInteraction : MonoBehaviour
 {
     private ObjectEventHandler currentTrigger; // Reference to the currently triggered ObjectEventHandler
     private EventCounter _eventCounter;
+    private AudioSource _repairSound;
 
     private void Start()
     {
         _eventCounter = GameObject.Find("EventCounter").GetComponent<EventCounter>();
+        _repairSound = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
         if (currentTrigger != null && Input.GetKeyDown(KeyCode.E))
         {
+            _repairSound.Play(0);
             currentTrigger.isEventActive = false;
+            if (currentTrigger.SoundEffect != null && currentTrigger.SoundEffect.isPlaying)
+            {
+                currentTrigger.SoundEffect.Stop();
+            }
             _eventCounter.DecrementCounter();
             Debug.Log("isEventActive set to False for " + currentTrigger.gameObject.name);
         }

@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GlobalEventHandler : MonoBehaviour
 {
-    public float secondsBetweenEvents = 10f;
+    public float waitTimeBeforeFirstEvent = 30f;
+    public float minSecondsBetweenEvents = 20f;
+    public float maxSecondsBetweenEvents = 60f;
     private GameObject[] _eventableObjects;
     private EventCounter _eventCounter;
     
@@ -13,16 +15,23 @@ public class GlobalEventHandler : MonoBehaviour
     {
         _eventableObjects = GameObject.FindGameObjectsWithTag("Eventable");
         _eventCounter = GameObject.Find("EventCounter").GetComponent<EventCounter>();
-        
-        // Start a coroutine to activate events every 10 seconds
-        StartCoroutine(ActivateRandomEvent());
+
+        // Wait for 30 seconds before starting the coroutine
+        StartCoroutine(DelayedCoroutine(ActivateRandomEvent(), waitTimeBeforeFirstEvent));
+    }
+
+    IEnumerator DelayedCoroutine(IEnumerator coroutine, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        StartCoroutine(coroutine);
     }
     
     IEnumerator ActivateRandomEvent()
     {
         while (true)
         {
-            yield return new WaitForSeconds(secondsBetweenEvents);
+            float randomTime = Random.Range(minSecondsBetweenEvents, maxSecondsBetweenEvents);
+            yield return new WaitForSeconds(randomTime);
 
             ChooseObjectForSetIsEventActive(_eventableObjects);
         }
