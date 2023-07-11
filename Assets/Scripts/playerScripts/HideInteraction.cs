@@ -14,7 +14,7 @@ public class HideInteraction : MonoBehaviour
     {
         if (currentTrigger != null && Input.GetKeyDown(KeyCode.E))
         {
-            currentTrigger.isEventActive = False;
+            currentTrigger.isEventActive = false;
             Debug.Log("isEventActive set to False for " + currentTrigger.gameObject.name);
         }
     }
