@@ -5,13 +5,17 @@ public class ObjectEventHandler : MonoBehaviour
     public bool isEventActive;
     public Sprite activeSprite;
     public Sprite inactiveSprite;
+    public ulong audioDelay = 0;
 
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _triggerCollider;
+    private AudioSource _soundEffect;
 
     private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _soundEffect = GetComponent<AudioSource>();
+        isEventActive = false;
 
         // Create a new BoxCollider2D component
         _triggerCollider = gameObject.AddComponent<BoxCollider2D>();
@@ -36,7 +40,7 @@ public class ObjectEventHandler : MonoBehaviour
             if (!_triggerCollider.enabled)
             {
                 _triggerCollider.enabled = true;
-                Debug.Log("Trigger box activated for " + gameObject.name);
+                // Debug.Log("Trigger box activated for " + gameObject.name);
             }
 
             // Change the sprite image to active sprite
@@ -51,7 +55,7 @@ public class ObjectEventHandler : MonoBehaviour
             if (_triggerCollider.enabled)
             {
                 _triggerCollider.enabled = false;
-                Debug.Log("Trigger box deactivated for " + gameObject.name);
+                // Debug.Log("Trigger box deactivated for " + gameObject.name);
             }
 
             // Change the sprite image to inactive sprite
@@ -73,5 +77,12 @@ public class ObjectEventHandler : MonoBehaviour
     public void SetEventActive()
     {
         isEventActive = true;
+        if (_soundEffect != null)
+        {
+            _soundEffect.Play(audioDelay);
+        }
+            
     }
+
+    public AudioSource SoundEffect => _soundEffect;
 }

@@ -37,7 +37,7 @@ public class Intro_1 : MonoBehaviour
                 
             }
 
-            if (index <= 3 || index > 6)
+            if (index <= 3)
                 spriteRenderer.sprite = happy;
             else
                 spriteRenderer.sprite = bored;

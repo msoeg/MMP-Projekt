@@ -157,5 +157,9 @@ public class PlayerMovement : MonoBehaviour
             canPressKey = false;
             Debug.Log("Can't press key");
         }
+        else if (other.CompareTag("Ghost"))
+        {
+            Debug.Log("Player ran into ghost!");
+        }
     }
 }
