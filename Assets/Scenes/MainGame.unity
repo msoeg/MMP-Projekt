@@ -8166,9 +8166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b03b6cf873f25cf42b5e0c3880b313ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTimeBeforeFirstEvent: 30
-  minSecondsBetweenEvents: 20
-  maxSecondsBetweenEvents: 60
+  waitTimeBeforeFirstEvent: 20
+  minSecondsBetweenEvents: 10
+  maxSecondsBetweenEvents: 30
 --- !u!4 &1258939837
 Transform:
   m_ObjectHideFlags: 0
