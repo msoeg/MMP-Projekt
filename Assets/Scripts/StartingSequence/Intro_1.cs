@@ -10,7 +10,7 @@ public class Intro_1 : MonoBehaviour
     public string[] lines;
     public float textSpeed;
 
-    public Sprite bored, happy;
+    public Sprite bored, happy, scared;
     public SpriteRenderer spriteRenderer;
 
     private int index;
@@ -39,8 +39,15 @@ public class Intro_1 : MonoBehaviour
 
             if (index <= 3)
                 spriteRenderer.sprite = happy;
+            else if (index == 7 || index == 8) 
+            { 
+                spriteRenderer.sprite = scared;
+            }
             else
+            {
                 spriteRenderer.sprite = bored;
+            }
+                 
             
         }
     }

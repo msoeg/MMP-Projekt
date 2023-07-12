@@ -10,8 +10,11 @@ public class Intro_2 : MonoBehaviour
     public string[] lines;
     public float textSpeed;
 
-    public Sprite bored, happy;
+    public Sprite bored, happy, scared;
     public SpriteRenderer spriteRenderer;
+
+    public AudioSource doorslam;
+    public AudioSource knocking;
 
     private int index;
 
@@ -36,9 +39,24 @@ public class Intro_2 : MonoBehaviour
                 textComponent.text = lines[index];
 
             }
-            
-            spriteRenderer.sprite = bored;
 
+            if (index >= 5 && index <= 9)
+            {
+                spriteRenderer.sprite = scared;
+            }
+            else
+            {
+                spriteRenderer.sprite = bored;
+            }
+
+            if (index == 5)
+            {
+                doorslam.Play();
+            }
+            if (index == 8)
+            {
+                knocking.Play();
+            }
         }
     }
     void StartDialogue()
