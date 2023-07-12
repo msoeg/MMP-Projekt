@@ -6525,6 +6525,7 @@ GameObject:
   - component: {fileID: 877437974}
   - component: {fileID: 877437978}
   - component: {fileID: 877437981}
+  - component: {fileID: 877437982}
   - component: {fileID: 877437973}
   - component: {fileID: 877437972}
   - component: {fileID: 877437977}
@@ -6812,6 +6813,19 @@ MonoBehaviour:
   isHidden: 0
   intText: {fileID: 1818152027}
   textValue: Hide [SPACE]
+--- !u!114 &877437982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877437971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b4cc708fc7f7c47ba76e00d4c3ea5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 3
 --- !u!1 &884716338
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,12 +16,14 @@ public class PlayerMovement : MonoBehaviour
     private bool isMoving;
     private Vector3 targetPosition;
     private bool canMoveHorizontally = true;
+    private PlayerHealth _playerHealth;
 
     public Animator animator;
 
     void Start()
     {
         myRigidbody.freezeRotation = true;
+        _playerHealth = GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -160,6 +162,7 @@ public class PlayerMovement : MonoBehaviour
         else if (other.CompareTag("Ghost"))
         {
             if(this.gameObject.GetComponent<HideInteraction>().isHidden == false) {
+                _playerHealth.SubtractHealth();
                 Debug.Log("Player ran into ghost!");
             }else{
                 Debug.Log("The Ghost didn't get you");
