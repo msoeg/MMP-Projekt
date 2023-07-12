@@ -105,66 +105,55 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("StairUp"))
+        switch (other.tag)
         {
-            canPressKey = true;
-            stair_type = "StairUp";
-            Debug.Log("Can press key");
-        }
-        else if (other.CompareTag("StairDown"))
-        {
-            canPressKey = true;
-            stair_type = "StairDown";
-            Debug.Log("Can press key");
-        }
-        else if (other.CompareTag("StairDiagUp"))
-        {
-            canPressKey = true;
-            stair_type = "StairDiagUp";
-            Debug.Log("Can press key");
-        }
-        else if (other.CompareTag("StairDiagDown"))
-        {
-            canPressKey = true;
-            stair_type = "StairDiagDown";
-            Debug.Log("Can press key");
+            case "StairUp":
+                canPressKey = true;
+                stair_type = "StairUp";
+                Debug.Log("Can press key");
+                break;
+        
+            case "StairDown":
+                canPressKey = true;
+                stair_type = "StairDown";
+                Debug.Log("Can press key");
+                break;
+        
+            case "StairDiagUp":
+                canPressKey = true;
+                stair_type = "StairDiagUp";
+                Debug.Log("Can press key");
+                break;
+        
+            case "StairDiagDown":
+                canPressKey = true;
+                stair_type = "StairDiagDown";
+                Debug.Log("Can press key");
+                break;
+        
+            case "Ghost":
+                if (this.gameObject.GetComponent<HideInteraction>().isHidden == false) Debug.Log("Player ran into ghost!");
+                else Debug.Log("The Ghost didn't get you");
+                break;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("StairUp"))
+        switch (other.tag)
         {
-            stair_type = "";
-            canPressKey = false;
-            Debug.Log("Can't press key");
-        }
-        else if (other.CompareTag("StairDown"))
-        {
-            stair_type = "";
-            canPressKey = false;
-            Debug.Log("Can't press key");
-        }
-        else if (other.CompareTag("StairDiagDown"))
-        {
-            stair_type = "";
-            canPressKey = false;
-            Debug.Log("Can't press key");
-        }
-        else if (other.CompareTag("StairDiagDown"))
-        {
-            stair_type = "";
-            canPressKey = false;
-            Debug.Log("Can't press key");
-        }
-        else if (other.CompareTag("Ghost"))
-        {
-            if(this.gameObject.GetComponent<HideInteraction>().isHidden == false) {
-                Debug.Log("Player ran into ghost!");
-            }else{
-                Debug.Log("The Ghost didn't get you");
-            }
-            
+            case "StairUp":
+            case "StairDown":
+            case "StairDiagDown":
+            case "StairDiagUp":
+                stair_type = "";
+                canPressKey = false;
+                Debug.Log("Can't press key");
+                break;
+            case "Ghost":
+                if (this.gameObject.GetComponent<HideInteraction>().isHidden == false) Debug.Log("Player ran into ghost!");
+                else Debug.Log("The Ghost didn't get you");
+                break;
         }
     }
 }
