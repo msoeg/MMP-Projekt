@@ -5,6 +5,7 @@ public class HideInteraction : MonoBehaviour
 {
     private ObjectHideHandler currentTrigger; // Reference to the currently triggered ObjectHideHandler
     
+    
     private void Start()
     {
         
@@ -12,18 +13,20 @@ public class HideInteraction : MonoBehaviour
 
     private void Update()
     {
-        if (currentTrigger != null && Input.GetKeyDown(KeyCode.E) && currentTrigger.hidden == false)
+        if (currentTrigger != null && Input.GetKeyDown(KeyCode.Space) && currentTrigger.hidden == false)
         {
             Debug.Log("Player is hidden");
             currentTrigger.hidden = true;
-            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            this.gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,0.3f);
+            this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
             this.gameObject.GetComponent<PlayerMovement>().enabled = false;
 
-        }else if(currentTrigger != null && Input.GetKeyDown(KeyCode.E) && currentTrigger.hidden == true)
+        }else if(currentTrigger != null && Input.GetKeyDown(KeyCode.Space) && currentTrigger.hidden == true)
         {
             Debug.Log("Player is not hidden");
             currentTrigger.hidden = false;
-            this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            this.gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,1f);
+            this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 100;
             this.gameObject.GetComponent<PlayerMovement>().enabled = true;
         }
     }
