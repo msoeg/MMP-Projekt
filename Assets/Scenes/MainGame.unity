@@ -818,7 +818,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e548b29de3b724ea89edb23df36ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEventActiveHide: 1
   hidden: 0
   player: {fileID: 0}
   hidingPlace: {fileID: 0}
@@ -1420,6 +1419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 258758368}
   - component: {fileID: 258758369}
+  - component: {fileID: 258758370}
   m_Layer: 0
   m_Name: Schrank (1)
   m_TagString: Untagged
@@ -1494,6 +1494,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &258758370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258758367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e548b29de3b724ea89edb23df36ddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hidden: 0
+  player: {fileID: 0}
+  hidingPlace: {fileID: 0}
+  _playerRender: {fileID: 0}
 --- !u!1 &260918218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,7 +1775,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e548b29de3b724ea89edb23df36ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEventActiveHide: 1
   hidden: 0
   player: {fileID: 0}
   hidingPlace: {fileID: 0}
@@ -4375,7 +4390,6 @@ GameObject:
   m_Component:
   - component: {fileID: 676005066}
   - component: {fileID: 676005067}
-  - component: {fileID: 676005068}
   m_Layer: 0
   m_Name: Regal
   m_TagString: Untagged
@@ -4450,23 +4464,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &676005068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676005065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15e548b29de3b724ea89edb23df36ddf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEventActiveHide: 1
-  hidden: 0
-  player: {fileID: 0}
-  hidingPlace: {fileID: 0}
-  _playerRender: {fileID: 0}
 --- !u!1 &689591188
 GameObject:
   m_ObjectHideFlags: 0
@@ -4732,7 +4729,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e548b29de3b724ea89edb23df36ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEventActiveHide: 1
   hidden: 0
   player: {fileID: 0}
   hidingPlace: {fileID: 0}
@@ -6917,7 +6913,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e548b29de3b724ea89edb23df36ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEventActiveHide: 1
   hidden: 0
   player: {fileID: 0}
   hidingPlace: {fileID: 0}
@@ -7262,7 +7257,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.77
+  m_Intensity: 0.08
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -11422,7 +11417,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e548b29de3b724ea89edb23df36ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEventActiveHide: 1
   hidden: 0
   player: {fileID: 0}
   hidingPlace: {fileID: 0}
@@ -11589,7 +11583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e548b29de3b724ea89edb23df36ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEventActiveHide: 1
   hidden: 0
   player: {fileID: 0}
   hidingPlace: {fileID: 0}
@@ -11943,7 +11936,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e548b29de3b724ea89edb23df36ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEventActiveHide: 1
   hidden: 0
   player: {fileID: 0}
   hidingPlace: {fileID: 0}
@@ -12097,7 +12089,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e548b29de3b724ea89edb23df36ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEventActiveHide: 1
   hidden: 0
   player: {fileID: 0}
   hidingPlace: {fileID: 0}
@@ -12782,7 +12773,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913126140}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 38cf4b480307a2944afcdb0789851c41, type: 3}

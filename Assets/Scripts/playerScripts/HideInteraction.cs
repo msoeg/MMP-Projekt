@@ -14,15 +14,17 @@ public class HideInteraction : MonoBehaviour
     {
         if (currentTrigger != null && Input.GetKeyDown(KeyCode.E) && currentTrigger.hidden == false)
         {
-            currentTrigger.isEventActiveHide = true;
-            currentTrigger.hidden = true; 
-            Debug.Log("isEventActiveHide set to true for " + currentTrigger.gameObject.name);
+            Debug.Log("Player is hidden");
+            currentTrigger.hidden = true;
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            this.gameObject.GetComponent<PlayerMovement>().enabled = false;
 
         }else if(currentTrigger != null && Input.GetKeyDown(KeyCode.E) && currentTrigger.hidden == true)
         {
-            currentTrigger.isEventActiveHide = true;
+            Debug.Log("Player is not hidden");
             currentTrigger.hidden = false;
-            Debug.Log("isEventActiveHide set to false for " + currentTrigger.gameObject.name);
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            this.gameObject.GetComponent<PlayerMovement>().enabled = true;
         }
     }
 
