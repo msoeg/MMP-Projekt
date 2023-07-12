@@ -1,30 +1,36 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HideInteraction : MonoBehaviour
 {
     private ObjectHideHandler currentTrigger; // Reference to the currently triggered ObjectHideHandler
+    public bool isHidden;
     
+    public Text intText;
+    public string textValue;
     
     private void Start()
     {
-        
+        isHidden = false;
+        intText.text = textValue;
+        intText.enabled = false;
     }
 
     private void Update()
     {
-        if (currentTrigger != null && Input.GetKeyDown(KeyCode.Space) && currentTrigger.hidden == false)
+        if (currentTrigger != null && Input.GetKeyDown(KeyCode.Space) && isHidden == false)
         {
             Debug.Log("Player is hidden");
-            currentTrigger.hidden = true;
+            isHidden = true;
             this.gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,0.3f);
             this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
             this.gameObject.GetComponent<PlayerMovement>().enabled = false;
 
-        }else if(currentTrigger != null && Input.GetKeyDown(KeyCode.Space) && currentTrigger.hidden == true)
+        }else if(currentTrigger != null && Input.GetKeyDown(KeyCode.Space) && isHidden == true)
         {
             Debug.Log("Player is not hidden");
-            currentTrigger.hidden = false;
+            isHidden = false;
             this.gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,1f);
             this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 100;
             this.gameObject.GetComponent<PlayerMovement>().enabled = true;
@@ -39,6 +45,7 @@ public class HideInteraction : MonoBehaviour
         {
             Debug.Log("Getriggert von: "+other.name);
             currentTrigger = objectHideHandler;
+            intText.enabled = true;
                         
         }
 
@@ -52,6 +59,7 @@ public class HideInteraction : MonoBehaviour
         {
             Debug.Log("Verlässt: "+other.name);
             currentTrigger = null;
+            intText.enabled = false;
             
         }
 

@@ -159,7 +159,12 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (other.CompareTag("Ghost"))
         {
-            Debug.Log("Player ran into ghost!");
+            if(this.gameObject.GetComponent<HideInteraction>().isHidden == false) {
+                Debug.Log("Player ran into ghost!");
+            }else{
+                Debug.Log("The Ghost didn't get you");
+            }
+            
         }
     }
 }

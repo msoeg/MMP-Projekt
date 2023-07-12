@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectHideHandler : MonoBehaviour
 {
 
-    public bool hidden;
     public GameObject player;
     public GameObject hidingPlace;
 
@@ -28,7 +28,7 @@ public class ObjectHideHandler : MonoBehaviour
         _triggerCollider.enabled = true;
 
         // Set the size of the BoxCollider2D
-        _triggerCollider.size = new Vector2(1f, 1.8f);
+        _triggerCollider.size = new Vector2(1f, 1f);
     }
 
     // Update is called once per frame
