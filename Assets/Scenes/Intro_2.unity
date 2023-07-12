@@ -316,7 +316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 12c6ce5ba326f32479573e17b0840f64, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0964196c919587d498dd6595fb2bc71e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1214,7 +1214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1871977500
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1299,7 +1299,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1456,7 +1456,7 @@ MonoBehaviour:
   textSpeed: 0.05
   bored: {fileID: 21300000, guid: 91bcc330712191c49a21aef538b685d6, type: 3}
   happy: {fileID: 21300000, guid: 0ea2c05dca937dc46b406583652f586e, type: 3}
-  scared: {fileID: 21300000, guid: ff3486817b4518045861a6b2b0c511d9, type: 3}
+  scared: {fileID: 21300000, guid: e53d443272f24cc4ba870cba48a6ec0a, type: 3}
   spriteRenderer: {fileID: 689772503}
   doorslam: {fileID: 1882540577}
   knocking: {fileID: 1882540578}

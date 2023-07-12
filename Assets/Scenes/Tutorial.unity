@@ -512,7 +512,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 12c6ce5ba326f32479573e17b0840f64, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0964196c919587d498dd6595fb2bc71e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -924,4 +924,4 @@ MonoBehaviour:
     objects by pressing E. But be aware - there might be some strange creature around
     only waiting for a misstep... Luckily, some furniture in here should be adqequete
     to hide behind. So - be quick with your reactions and don't get cought!
-  textSpeed: 0
+  textSpeed: 0.05

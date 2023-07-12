@@ -40,7 +40,7 @@ public class Intro_2 : MonoBehaviour
 
             }
 
-            if (index >= 5 && index <= 9)
+            if (index >= 5)
             {
                 spriteRenderer.sprite = scared;
             }
