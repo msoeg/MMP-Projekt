@@ -29,12 +29,17 @@ public class GhostPathScript : MonoBehaviour
         actualPosition = ghost.transform.position;
         ghostCapsule.enabled = x % 2 != 0;
         ghostSpriteRenderer.enabled = x % 2 != 0;
-        
+
+        if (x > 0 && x < numberOfPoints ) ghostSpriteRenderer.flipX = path[x].transform.position.x < path[x - 1].transform.position.x;
+        else ghostSpriteRenderer.flipX = false;
+
         ghost.transform.position =
             Vector3.MoveTowards(actualPosition, path[x].transform.position, speed * Time.deltaTime);
-
-        if (actualPosition == path[x].transform.position && x != numberOfPoints - 1) x++;
-        //else x = 0;
-        else if (x == numberOfPoints - 1) x = 0;
+        
+        if (actualPosition == path[x].transform.position)
+        {
+            if (x < numberOfPoints - 1) x++;
+            else x = 0;
+        }
     }
 }
