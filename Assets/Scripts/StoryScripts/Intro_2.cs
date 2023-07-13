@@ -10,7 +10,7 @@ public class Intro_2 : MonoBehaviour
     public string[] lines;
     public float textSpeed;
 
-    public Sprite bored, happy, scared;
+    public Sprite bored, happy, scared, semi_scared;
     public SpriteRenderer spriteRenderer;
 
     public AudioSource doorslam;
@@ -40,15 +40,17 @@ public class Intro_2 : MonoBehaviour
 
             }
 
-            if (index >= 5)
+            // What Portrait is being shown
+            if (index == 5 || index == 8 || index == 9)
             {
                 spriteRenderer.sprite = scared;
             }
             else
             {
-                spriteRenderer.sprite = bored;
+                spriteRenderer.sprite = semi_scared;
             }
 
+            // Music cues
             if (index == 5)
             {
                 doorslam.Play();
@@ -58,6 +60,7 @@ public class Intro_2 : MonoBehaviour
                 knocking.Play();
             }
         }
+            
     }
     void StartDialogue()
     {
