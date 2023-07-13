@@ -10,21 +10,26 @@ public class EndingSequence : MonoBehaviour
     public string[] lines;
     public float textSpeed;
 
-    public Sprite bored, happy, scared;
+    public Sprite bored, happy, scared, semi_scared;
     public SpriteRenderer spriteRenderer;
 
-
+    public AudioSource clock;
+    public AudioSource door;
+    public AudioSource outdoor;
 
     private int index;
 
     void Start()
     {
+        clock.Play();
+
         textComponent.text = string.Empty;
         StartDialogue();
     }
 
     void Update()
     {
+        
         if (Input.GetMouseButtonDown(0))
         {
             if (textComponent.text == lines[index])
@@ -38,13 +43,21 @@ public class EndingSequence : MonoBehaviour
 
             }
 
-            if (index >= 5)
+            // Portraits for lines
+            if (index <= 2 || index == 4 || index == 5)
             {
-                spriteRenderer.sprite = scared;
+                spriteRenderer.sprite = semi_scared;
             }
             else
             {
-                spriteRenderer.sprite = bored;
+                spriteRenderer.sprite = happy;
+            }
+
+            // Audio clips
+            if (index == 5)
+            {
+                door.Play();
+                outdoor.Play();
             }
 
         }
@@ -74,7 +87,7 @@ public class EndingSequence : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(6);
 
         }
     }
