@@ -10,7 +10,7 @@ public class Intro_1 : MonoBehaviour
     public string[] lines;
     public float textSpeed;
 
-    public Sprite bored, happy, scared;
+    public Sprite bored, happy, scared, semi_scared;
     public SpriteRenderer spriteRenderer;
 
     private int index;
@@ -36,12 +36,18 @@ public class Intro_1 : MonoBehaviour
                 textComponent.text = lines[index];
                 
             }
-
+            // What portrait is being shown
             if (index <= 3)
+            {
                 spriteRenderer.sprite = happy;
-            else if (index == 7 || index == 8) 
-            { 
+            }
+            else if (index == 7)
+            {
                 spriteRenderer.sprite = scared;
+            }
+            else if (index == 8 || index == 11)
+            {
+                spriteRenderer.sprite = semi_scared;
             }
             else
             {

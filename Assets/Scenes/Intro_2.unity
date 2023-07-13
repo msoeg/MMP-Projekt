@@ -548,7 +548,7 @@ SpriteRenderer:
   m_SortingLayerID: -161827741
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 91bcc330712191c49a21aef538b685d6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 77eb21d60dd4fe146aee5dca1a213ca9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1457,6 +1457,7 @@ MonoBehaviour:
   bored: {fileID: 21300000, guid: 91bcc330712191c49a21aef538b685d6, type: 3}
   happy: {fileID: 21300000, guid: 0ea2c05dca937dc46b406583652f586e, type: 3}
   scared: {fileID: 21300000, guid: e53d443272f24cc4ba870cba48a6ec0a, type: 3}
+  semi_scared: {fileID: 21300000, guid: 77eb21d60dd4fe146aee5dca1a213ca9, type: 3}
   spriteRenderer: {fileID: 689772503}
   doorslam: {fileID: 1882540577}
   knocking: {fileID: 1882540578}
@@ -1569,12 +1570,12 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 6a16fe165a88a5f41bbd5438a1a4dbf6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.78
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 167
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
