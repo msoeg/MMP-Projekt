@@ -3585,6 +3585,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   remainingTime: 
   timerDuration: 600
+  secondWall: {fileID: 21300000, guid: 9cd2995305308c84589f62634a789da5, type: 3}
+  thirdWall: {fileID: 21300000, guid: acc71e379dcd58345a9f27bc8dbf1753, type: 3}
 --- !u!1 &523183405
 GameObject:
   m_ObjectHideFlags: 0
@@ -8118,6 +8120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   remainingTime: 
   timerDuration: 600
+  secondWall: {fileID: 0}
+  thirdWall: {fileID: 0}
 --- !u!82 &1125683321
 AudioSource:
   m_ObjectHideFlags: 0

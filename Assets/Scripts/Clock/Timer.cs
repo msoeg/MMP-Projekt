@@ -9,12 +9,16 @@ public class Timer : MonoBehaviour
     private float _startTime;
     private AudioSource _gongSound;
     private ulong audioDelay;
+    private SpriteRenderer wallpaperSprite;
+    public Sprite secondWall;
+    public Sprite thirdWall;
 
     private void Start()
     {
         _startTime = Time.time;
         _gongSound = GetComponent<AudioSource>();
         audioDelay = 0;
+        wallpaperSprite = GameObject.Find("Wallpaper").GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -35,6 +39,18 @@ public class Timer : MonoBehaviour
         if(this.remainingTime.Contains(":00") && !this.remainingTime.Contains("10:") && _gongSound != null){
             
             _gongSound.Play(audioDelay);
+        }
+        if( wallpaperSprite != null && secondWall != null && thirdWall != null){
+            if(this.remainingTime.Contains("2:00"))
+            {
+                Debug.Log("Mooiin");
+                wallpaperSprite.sprite = secondWall;
+            }else if(this.remainingTime.Contains("1:00"))
+            {
+                wallpaperSprite.sprite = thirdWall;
+            }
+        }else{
+            Debug.Log("Is leer");
         }
     }
 }
