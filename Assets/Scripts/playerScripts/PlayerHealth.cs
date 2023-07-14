@@ -6,15 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private void Update()
-    {
-        if (playerHealth <= 0)
-        {
-            Debug.LogWarning("Game Over!");
-            // SceneManager.LoadScene("GameOver");
-        }
-    }
-
     [SerializeField]
     private int playerHealth = 3;
 
@@ -28,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
         playerHealth = playerHealth + 1;
     }
 
-    public int getPlayerHealth()
+    public int GetPlayerHealth()
     {
         return playerHealth;
     }
