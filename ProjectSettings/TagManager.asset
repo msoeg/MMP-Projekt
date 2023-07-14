@@ -12,6 +12,7 @@ TagManager:
   - StairDiagDown
   - HidingPlace
   - Ghost
+  - Health
   layers:
   - Default
   - TransparentFX
