@@ -16,6 +16,8 @@ public class HealthDisplayBehavior : MonoBehaviour
     private PlayerHealth _playerHealth;
     private int health_count;
 
+    public AudioSource damage;
+
 
     private void Awake()
     {
@@ -35,14 +37,18 @@ public class HealthDisplayBehavior : MonoBehaviour
             {
                 case 3:
                     heart3.sprite = emptyHeart;
+                    damage.Play();
                     break;
                 case 2:
                     heart2.sprite = emptyHeart;
+                    damage.Play();
                     break;
                 case 1:
                     heart1.sprite = emptyHeart;
+                    damage.Play();
                     break;
             }
             health_count--;
+        
     }
 }
