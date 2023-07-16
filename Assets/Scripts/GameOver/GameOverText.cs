@@ -10,6 +10,7 @@ public class GameOverText : MonoBehaviour
     private TextMeshProUGUI textMesh;
     private float timer;
     private int visibleCharacterCount;
+    private string _survivedTime;
 
     private void Start()
     {
@@ -17,6 +18,8 @@ public class GameOverText : MonoBehaviour
         textMesh.maxVisibleCharacters = 0; // Start with no visible characters
         timer = 0f;
         visibleCharacterCount = 0;
+        _survivedTime = Timer.RemainingTimeStatic;
+        Debug.Log("Remaining time was " + _survivedTime);
     }
 
     private void Update()
