@@ -4,26 +4,23 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class Ending_2 : MonoBehaviour
+public class Credits : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
 
-    public Sprite bored, happy, scared, semi_scared;
-    public SpriteRenderer spriteRenderer;
-
     private int index;
 
     void Start()
-    { 
+    {
         textComponent.text = string.Empty;
         StartDialogue();
+        //SceneManager.LoadScene("Intro_2");
     }
 
     void Update()
     {
-
         if (Input.GetMouseButtonDown(0))
         {
             if (textComponent.text == lines[index])
@@ -36,19 +33,7 @@ public class Ending_2 : MonoBehaviour
                 textComponent.text = lines[index];
 
             }
-            // Portraits for lines
-            if (index == 3 || index == 5 || index == 9)
-            {
-                spriteRenderer.sprite = bored;
-            }
-            else if (index == 4 || index == 6 || index == 7)
-            {
-                spriteRenderer.sprite = semi_scared;
-            }
-            else
-            {
-                spriteRenderer.sprite = happy;
-            }
+
         }
     }
     void StartDialogue()
@@ -76,8 +61,7 @@ public class Ending_2 : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(8);
-
+            SceneManager.LoadScene(0);
         }
     }
 }
