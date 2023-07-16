@@ -2849,7 +2849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef9562a63529eee46929ca2d2c35ef76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyHeart: {fileID: 21300000, guid: e2786d15146832745b268d568b3529cd, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 22e66e35e7e851641878115c6e92df0c, type: 3}
   heart1: {fileID: 1026841832}
   heart2: {fileID: 1446593571}
   heart3: {fileID: 239551850}
