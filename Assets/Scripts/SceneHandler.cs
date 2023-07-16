@@ -23,7 +23,7 @@ public class SceneHandler : MonoBehaviour
         _playerHealth = _playerHealthObject.GetPlayerHealth();
         if (_playerHealth <= 0)
         {
-            SceneManager.LoadScene("Ending_2");
+            SceneManager.LoadScene("GameOver");
         }
 
         _remainingTime = _timer.remainingTime;
