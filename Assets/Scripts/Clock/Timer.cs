@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public string remainingTime;
+    public static string RemainingTimeStatic;
     public float timerDuration = 600f; // 10 minutes in seconds
     private float _startTime;
     private AudioSource _gongSound;
@@ -31,10 +32,12 @@ public class Timer : MonoBehaviour
             int minutes = (int)(remainingTime / 60);
             int seconds = (int)(remainingTime % 60);
             this.remainingTime = string.Format("{0:00}:{1:00}", minutes, seconds);
+            RemainingTimeStatic = this.remainingTime;
         }
         else
         {
             this.remainingTime = "00:00"; // Timer reached 10 minutes
+            RemainingTimeStatic = this.remainingTime;
         }
         if(this.remainingTime.Contains(":00") && !this.remainingTime.Contains("10:") && _gongSound != null){
             
