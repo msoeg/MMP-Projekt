@@ -404,6 +404,7 @@ GameObject:
   - component: {fileID: 369555818}
   - component: {fileID: 369555817}
   - component: {fileID: 369555816}
+  - component: {fileID: 369555819}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -477,6 +478,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &369555819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369555815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &408344937
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,6 +720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 628915383}
   - component: {fileID: 628915385}
+  - component: {fileID: 628915387}
   - component: {fileID: 628915386}
   - component: {fileID: 628915384}
   m_Layer: 5
@@ -825,6 +860,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   survivedTime: {fileID: 628915384}
+--- !u!114 &628915387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628915382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e08b5f0189c3a4a4a937dd07609779c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  letterDelay: 3.8
+  animationDuration: 4
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &644005034
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,6 +1043,7 @@ GameObject:
   m_Component:
   - component: {fileID: 928869691}
   - component: {fileID: 928869693}
+  - component: {fileID: 928869694}
   - component: {fileID: 928869692}
   m_Layer: 5
   m_Name: YouSurvivedText
@@ -1095,6 +1169,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928869690}
   m_CullTransparentMesh: 1
+--- !u!114 &928869694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928869690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e08b5f0189c3a4a4a937dd07609779c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  letterDelay: 0.2
+  animationDuration: 1
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1174978132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,7 +1373,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _survivedTimeString: 
 --- !u!222 &1174978136
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1845,7 +1956,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1828377757}
-  - component: {fileID: 1828377758}
   m_Layer: 5
   m_Name: Time
   m_TagString: Untagged
@@ -1875,23 +1985,6 @@ RectTransform:
   m_AnchoredPosition: {x: -275, y: 102.99999}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1828377758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828377756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 547fa58b8997e814c98f027af86dd0e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetRectTransform: {fileID: 1828377757}
-  animationDuration: 2
-  startPosition: -1500
-  endPosition: -275
-  bounceHeight: 100
 --- !u!1 &1829536850
 GameObject:
   m_ObjectHideFlags: 0
