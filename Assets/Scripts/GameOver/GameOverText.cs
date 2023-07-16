@@ -25,7 +25,7 @@ public class GameOverText : MonoBehaviour
         Debug.Log("You survived " + _survivedTimeString);
     }
 
-    private string CalculateSurvivedTimeString()
+    public string CalculateSurvivedTimeString()
     {
         string startTime = "10:00";
         _remainingTime = Timer.RemainingTimeStatic;
@@ -33,7 +33,10 @@ public class GameOverText : MonoBehaviour
         DateTime startDateTime = DateTime.ParseExact(startTime, "HH:mm", null);
         TimeSpan survivedTime = startDateTime - remainingDateTime;
         string survivedTimeString = survivedTime.ToString(@"hh\:mm");
-        return survivedTimeString;
+        if (!string.IsNullOrEmpty(survivedTimeString)) {
+   	        return survivedTimeString;
+        }
+        return "0";
     }
 
     private void Update()
