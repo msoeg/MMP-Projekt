@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using TMPro;
 
@@ -10,7 +11,8 @@ public class GameOverText : MonoBehaviour
     private TextMeshProUGUI textMesh;
     private float timer;
     private int visibleCharacterCount;
-    private string _survivedTime;
+    private string _remainingTime;
+    private string _survivedTimeString;
 
     private void Start()
     {
@@ -18,8 +20,20 @@ public class GameOverText : MonoBehaviour
         textMesh.maxVisibleCharacters = 0; // Start with no visible characters
         timer = 0f;
         visibleCharacterCount = 0;
-        _survivedTime = Timer.RemainingTimeStatic;
-        Debug.Log("Remaining time was " + _survivedTime);
+        _survivedTimeString = CalculateSurvivedTimeString();
+
+        Debug.Log("You survived " + _survivedTimeString);
+    }
+
+    private string CalculateSurvivedTimeString()
+    {
+        string startTime = "10:00";
+        _remainingTime = Timer.RemainingTimeStatic;
+        DateTime remainingDateTime = DateTime.ParseExact(_remainingTime, "HH:mm", null);
+        DateTime startDateTime = DateTime.ParseExact(startTime, "HH:mm", null);
+        TimeSpan survivedTime = startDateTime - remainingDateTime;
+        string survivedTimeString = survivedTime.ToString(@"hh\:mm");
+        return survivedTimeString;
     }
 
     private void Update()
