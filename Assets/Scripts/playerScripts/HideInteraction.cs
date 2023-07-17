@@ -25,7 +25,7 @@ public class HideInteraction : MonoBehaviour
             Debug.Log("Player is hidden");
             isHidden = true;
             _playerRenderer.color = new Color(1f,1f,1f,0.3f);
-            _playerRenderer.sortingOrder = 1;
+            _playerRenderer.sortingOrder = 2;
             _playerRenderer.GetComponent<PlayerMovement>().enabled = false;
 
         }else if(currentTrigger != null && Input.GetKeyDown(KeyCode.Space) && isHidden == true)
