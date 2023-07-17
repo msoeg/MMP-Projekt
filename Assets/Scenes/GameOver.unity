@@ -872,8 +872,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e08b5f0189c3a4a4a937dd07609779c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterDelay: 3.8
-  animationDuration: 4
+  letterDelay: 0.4
+  animationDuration: 1
   animationCurve:
     serializedVersion: 2
     m_Curve:
