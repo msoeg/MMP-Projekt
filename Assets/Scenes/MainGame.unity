@@ -772,7 +772,7 @@ MonoBehaviour:
   - {fileID: 1576576696}
   - {fileID: 1948896124}
   numberOfPoints: 8
-  speed: 3
+  speed: 2.75
 --- !u!1 &119794828
 GameObject:
   m_ObjectHideFlags: 0
