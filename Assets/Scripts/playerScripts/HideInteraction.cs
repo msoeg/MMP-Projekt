@@ -6,6 +6,7 @@ public class HideInteraction : MonoBehaviour
 {
     private ObjectHideHandler currentTrigger; // Reference to the currently triggered ObjectHideHandler
     public bool isHidden;
+    public SpriteRenderer _playerRenderer;
     
     public Text intText;
     public string textValue;
@@ -23,17 +24,17 @@ public class HideInteraction : MonoBehaviour
         {
             Debug.Log("Player is hidden");
             isHidden = true;
-            this.gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,0.3f);
-            this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
-            this.gameObject.GetComponent<PlayerMovement>().enabled = false;
+            _playerRenderer.color = new Color(1f,1f,1f,0.3f);
+            _playerRenderer.sortingOrder = 1;
+            _playerRenderer.GetComponent<PlayerMovement>().enabled = false;
 
         }else if(currentTrigger != null && Input.GetKeyDown(KeyCode.Space) && isHidden == true)
         {
             Debug.Log("Player is not hidden");
             isHidden = false;
-            this.gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,1f);
-            this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 100;
-            this.gameObject.GetComponent<PlayerMovement>().enabled = true;
+            _playerRenderer.color = new Color(1f,1f,1f,1f);
+            _playerRenderer.sortingOrder = 100;
+            _playerRenderer.GetComponent<PlayerMovement>().enabled = true;
         }
     }
 
