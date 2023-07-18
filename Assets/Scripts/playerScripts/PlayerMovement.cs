@@ -12,10 +12,10 @@ public class PlayerMovement : MonoBehaviour
     public CapsuleCollider2D capsuleCollider;
 
     private bool canPressKey;
-    private string stair_type = "";
     private bool isMoving;
-    private Vector3 targetPosition;
     private bool canMoveHorizontally = true;
+    private string stair_type = "";
+    private Vector3 targetPosition;
     private PlayerHealth _playerHealth;
 
     public Animator animator;
@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
                         targetPosition = transform.position + goUp;
                         capsuleCollider.enabled = false;
                         isMoving = true;
+                        animator.SetFloat("Horizontal", 0f);
                         animator.SetTrigger("TrClimb");
 
                     }
@@ -66,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
                         targetPosition = transform.position + goDown;
                         capsuleCollider.enabled = false;
                         isMoving = true;
+                        animator.SetFloat("Horizontal", 0f);
                         animator.SetTrigger("TrClimb");
                     }
                     else if (stair_type.Equals("StairDiagUp") &&
@@ -75,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
                         targetPosition = transform.position + goUp;
                         capsuleCollider.enabled = false;
                         isMoving = true;
+                        animator.SetFloat("Horizontal", 0f);
                         animator.SetTrigger("TrStairUp");
                     }
                     else if (stair_type.Equals("StairDiagDown") &&
@@ -84,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
                         targetPosition = transform.position + goDown;
                         capsuleCollider.enabled = false;
                         isMoving = true;
+                        animator.SetFloat("Horizontal", 0f);
                         animator.SetTrigger("TrStairDown");
                     }
                 }

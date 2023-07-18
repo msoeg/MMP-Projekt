@@ -7330,7 +7330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHidden: 0
-  _playerRenderer: {fileID: 877437975}
+  playerRenderer: {fileID: 877437975}
+  animator: {fileID: 877437977}
   intText: {fileID: 1818152027}
   textValue: Hide [SPACE]
 --- !u!114 &877437982

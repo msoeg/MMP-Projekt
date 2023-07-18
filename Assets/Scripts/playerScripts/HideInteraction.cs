@@ -1,13 +1,18 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class HideInteraction : MonoBehaviour
 {
-    private ObjectHideHandler currentTrigger; // Reference to the currently triggered ObjectHideHandler
+    private ObjectHideHandler _currentTrigger; // Reference to the currently triggered ObjectHideHandler
+    private Rigidbody2D _playerRigidBody;
+    private PlayerMovement _playerMovement;
+
     public bool isHidden;
-    public SpriteRenderer _playerRenderer;
-    
+    public SpriteRenderer playerRenderer;
+    public Animator animator;
+
     public Text intText;
     public string textValue;
     
@@ -16,26 +21,38 @@ public class HideInteraction : MonoBehaviour
         isHidden = false;
         intText.text = textValue;
         intText.enabled = false;
+        _playerRigidBody = GetComponent<Rigidbody2D>();
+        _playerMovement = GetComponent<PlayerMovement>();
     }
 
     private void Update()
     {
-        if (currentTrigger != null && Input.GetKeyDown(KeyCode.Space) && isHidden == false)
+        if (_currentTrigger != null && Input.GetKeyDown(KeyCode.Space) && !isHidden)
         {
             Debug.Log("Player is hidden");
             isHidden = true;
-            _playerRenderer.color = new Color(1f,1f,1f,0.3f);
-            _playerRenderer.sortingOrder = 2;
-            _playerRenderer.GetComponent<PlayerMovement>().enabled = false;
+            playerRenderer.color = new Color(1f,1f,1f,0.3f);
+            playerRenderer.sortingOrder = 2;
+            ResetPlayerMovement();
+            _playerMovement.enabled = false;
+            animator.SetTrigger("Default");
 
-        }else if(currentTrigger != null && Input.GetKeyDown(KeyCode.Space) && isHidden == true)
+        }else if(_currentTrigger != null && Input.GetKeyDown(KeyCode.Space) && isHidden)
         {
             Debug.Log("Player is not hidden");
             isHidden = false;
-            _playerRenderer.color = new Color(1f,1f,1f,1f);
-            _playerRenderer.sortingOrder = 100;
-            _playerRenderer.GetComponent<PlayerMovement>().enabled = true;
+            playerRenderer.color = new Color(1f,1f,1f,1f);
+            playerRenderer.sortingOrder = 100;
+            playerRenderer.GetComponent<PlayerMovement>().enabled = true;
         }
+    }
+
+    private void ResetPlayerMovement()
+    {
+        Vector2 newVelocity = _playerRigidBody.velocity;
+        newVelocity.x = 0f;
+        _playerRigidBody.velocity = newVelocity;
+        animator.SetFloat("Horizontal", 0f);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -45,7 +62,7 @@ public class HideInteraction : MonoBehaviour
         if (objectHideHandler != null)
         {
             Debug.Log("Getriggert von: "+other.name);
-            currentTrigger = objectHideHandler;
+            _currentTrigger = objectHideHandler;
             intText.enabled = true;
                         
         }
@@ -56,10 +73,10 @@ public class HideInteraction : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         ObjectHideHandler objectHideHandler = other.GetComponent<ObjectHideHandler>();
-        if (objectHideHandler != null && objectHideHandler == currentTrigger)
+        if (objectHideHandler != null && objectHideHandler == _currentTrigger)
         {
             Debug.Log("Verlässt: "+other.name);
-            currentTrigger = null;
+            _currentTrigger = null;
             intText.enabled = false;
             
         }
