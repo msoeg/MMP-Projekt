@@ -87,7 +87,7 @@ public class Intro_2 : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(0);
 
         }
     }
