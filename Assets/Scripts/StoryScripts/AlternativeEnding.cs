@@ -88,7 +88,7 @@ public class AlternativeEnding : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(8);
+            SceneManager.LoadScene(0);
 
         }
     }
