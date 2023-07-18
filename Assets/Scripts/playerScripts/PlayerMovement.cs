@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,14 +6,19 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public CapsuleCollider2D capsuleCollider;
 
-    private bool canPressKey;
-    private bool isMoving;
-    private bool canMoveHorizontally = true;
-    private string stair_type = "";
-    private Vector3 targetPosition;
+    private bool _canPressKey;
+    private bool _isMoving;
+    private const bool CanMoveHorizontally = true;
+    private string _stairType = "";
+    private Vector3 _targetPosition;
     private PlayerHealth _playerHealth;
 
     public Animator animator;
+    private static readonly int TrStairDown = Animator.StringToHash("TrStairDown");
+    private static readonly int Horizontal = Animator.StringToHash("Horizontal");
+    private static readonly int TrStairUp = Animator.StringToHash("TrStairUp");
+    private static readonly int TrClimb = Animator.StringToHash("TrClimb");
+    private static readonly int Default = Animator.StringToHash("Default");
 
     void Start()
     {
@@ -30,65 +30,65 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
-        if (canMoveHorizontally && !isMoving)
+        if (CanMoveHorizontally && !_isMoving)
         {
-            animator.SetFloat("Horizontal", moveHorizontal);
+            animator.SetFloat(Horizontal, moveHorizontal);
             Vector3 movement = new Vector3(moveHorizontal * moveSpeed * Time.deltaTime, 0, 0);
             transform.position += movement;
         }
 
         HandleInput();
-        if(isMoving) MovePlayer();
+        if(_isMoving) MovePlayer();
     }
 
     private void HandleInput()
     {
-        if (canPressKey)
+        if (_canPressKey)
         {
-            if (!isMoving)
+            if (!_isMoving)
             {
-                if (canMoveHorizontally)
+                if (CanMoveHorizontally)
                 {
-                    if (stair_type.Equals("StairUp") &&
+                    if (_stairType.Equals("StairUp") &&
                         (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
                     {
                         Vector3 goUp = new Vector3(0f, 3f, 0f);
-                        targetPosition = transform.position + goUp;
+                        _targetPosition = transform.position + goUp;
                         capsuleCollider.enabled = false;
-                        isMoving = true;
-                        animator.SetFloat("Horizontal", 0f);
-                        animator.SetTrigger("TrClimb");
+                        _isMoving = true;
+                        animator.SetFloat(Horizontal, 0f);
+                        animator.SetTrigger(TrClimb);
 
                     }
-                    else if (stair_type.Equals("StairDown") &&
+                    else if (_stairType.Equals("StairDown") &&
                              (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)))
                     {
                         Vector3 goDown = new Vector3(0f, -3f, 0f);
-                        targetPosition = transform.position + goDown;
+                        _targetPosition = transform.position + goDown;
                         capsuleCollider.enabled = false;
-                        isMoving = true;
-                        animator.SetFloat("Horizontal", 0f);
-                        animator.SetTrigger("TrClimb");
+                        _isMoving = true;
+                        animator.SetFloat(Horizontal, 0f);
+                        animator.SetTrigger(TrClimb);
                     }
-                    else if (stair_type.Equals("StairDiagUp") &&
+                    else if (_stairType.Equals("StairDiagUp") &&
                              (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
                     {
                         Vector3 goUp = new Vector3(3.5f, 3f, 0f);
-                        targetPosition = transform.position + goUp;
+                        _targetPosition = transform.position + goUp;
                         capsuleCollider.enabled = false;
-                        isMoving = true;
-                        animator.SetFloat("Horizontal", 0f);
-                        animator.SetTrigger("TrStairUp");
+                        _isMoving = true;
+                        animator.SetFloat(Horizontal, 0f);
+                        animator.SetTrigger(TrStairUp);
                     }
-                    else if (stair_type.Equals("StairDiagDown") &&
+                    else if (_stairType.Equals("StairDiagDown") &&
                              (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)))
                     {
                         Vector3 goDown = new Vector3(-3.5f, -3f, 0f);
-                        targetPosition = transform.position + goDown;
+                        _targetPosition = transform.position + goDown;
                         capsuleCollider.enabled = false;
-                        isMoving = true;
-                        animator.SetFloat("Horizontal", 0f);
-                        animator.SetTrigger("TrStairDown");
+                        _isMoving = true;
+                        animator.SetFloat(Horizontal, 0f);
+                        animator.SetTrigger(TrStairDown);
                     }
                 }
             }
@@ -97,14 +97,14 @@ public class PlayerMovement : MonoBehaviour
     
     private void MovePlayer()
     {
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, _targetPosition, moveSpeed * Time.deltaTime);
 
         // Check if the player has reached the target position
-        if (transform.position == targetPosition)
+        if (transform.position == _targetPosition)
         {
             capsuleCollider.enabled = true;
-            animator.SetTrigger("Default");
-            isMoving = false;
+            animator.SetTrigger(Default);
+            _isMoving = false;
             
         }
     }
@@ -114,26 +114,26 @@ public class PlayerMovement : MonoBehaviour
         switch (other.tag)
         {
             case "StairUp":
-                canPressKey = true;
-                stair_type = "StairUp";
+                _canPressKey = true;
+                _stairType = "StairUp";
                 Debug.Log("Can press key");
                 break;
         
             case "StairDown":
-                canPressKey = true;
-                stair_type = "StairDown";
+                _canPressKey = true;
+                _stairType = "StairDown";
                 Debug.Log("Can press key");
                 break;
         
             case "StairDiagUp":
-                canPressKey = true;
-                stair_type = "StairDiagUp";
+                _canPressKey = true;
+                _stairType = "StairDiagUp";
                 Debug.Log("Can press key");
                 break;
         
             case "StairDiagDown":
-                canPressKey = true;
-                stair_type = "StairDiagDown";
+                _canPressKey = true;
+                _stairType = "StairDiagDown";
                 Debug.Log("Can press key");
                 break;
         
@@ -152,8 +152,8 @@ public class PlayerMovement : MonoBehaviour
             case "StairDown":
             case "StairDiagDown":
             case "StairDiagUp":
-                stair_type = "";
-                canPressKey = false;
+                _stairType = "";
+                _canPressKey = false;
                 Debug.Log("Can't press key");
                 break;
             case "Ghost":
