@@ -919,9 +919,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 345936603}
   lines:
-  - You're locked in this house unitl 6 am.  If you want to survive, keep on the
+  - You're locked in this house until 6 am.  If you want to survive, keep on the
     move by using WASD, listen to your surroundings and quickly interact with suspicious
     objects by pressing E. But be aware - there might be some strange creature around
-    only waiting for a misstep... Luckily, some furniture in here should be adqequete
-    to hide behind. So - be quick with your reactions and don't get cought!
+    only waiting for a misstep... Luckily, some furniture in here should be adequate
+    to hide behind. So - be quick with your reactions and don't get caught!
   textSpeed: 0.05
