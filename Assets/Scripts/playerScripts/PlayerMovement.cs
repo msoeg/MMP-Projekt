@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
 
     private bool _canPressKey;
     private bool _isMoving;
-    private const bool CanMoveHorizontally = true;
     private string _stairType = "";
     private Vector3 _targetPosition;
     private PlayerHealth _playerHealth;
@@ -30,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
-        if (CanMoveHorizontally && !_isMoving)
+        if (!_isMoving)
         {
             animator.SetFloat(Horizontal, moveHorizontal);
             Vector3 movement = new Vector3(moveHorizontal * moveSpeed * Time.deltaTime, 0, 0);
@@ -47,49 +46,46 @@ public class PlayerMovement : MonoBehaviour
         {
             if (!_isMoving)
             {
-                if (CanMoveHorizontally)
+                if (_stairType.Equals("StairUp") &&
+                    (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
                 {
-                    if (_stairType.Equals("StairUp") &&
-                        (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
-                    {
-                        Vector3 goUp = new Vector3(0f, 3f, 0f);
-                        _targetPosition = transform.position + goUp;
-                        capsuleCollider.enabled = false;
-                        _isMoving = true;
-                        animator.SetFloat(Horizontal, 0f);
-                        animator.SetTrigger(TrClimb);
+                    Vector3 goUp = new Vector3(0f, 3f, 0f);
+                    _targetPosition = transform.position + goUp;
+                    capsuleCollider.enabled = false;
+                    _isMoving = true;
+                    animator.SetFloat(Horizontal, 0f);
+                    animator.SetTrigger(TrClimb);
 
-                    }
-                    else if (_stairType.Equals("StairDown") &&
-                             (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)))
-                    {
-                        Vector3 goDown = new Vector3(0f, -3f, 0f);
-                        _targetPosition = transform.position + goDown;
-                        capsuleCollider.enabled = false;
-                        _isMoving = true;
-                        animator.SetFloat(Horizontal, 0f);
-                        animator.SetTrigger(TrClimb);
-                    }
-                    else if (_stairType.Equals("StairDiagUp") &&
-                             (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
-                    {
-                        Vector3 goUp = new Vector3(3.5f, 3f, 0f);
-                        _targetPosition = transform.position + goUp;
-                        capsuleCollider.enabled = false;
-                        _isMoving = true;
-                        animator.SetFloat(Horizontal, 0f);
-                        animator.SetTrigger(TrStairUp);
-                    }
-                    else if (_stairType.Equals("StairDiagDown") &&
-                             (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)))
-                    {
-                        Vector3 goDown = new Vector3(-3.5f, -3f, 0f);
-                        _targetPosition = transform.position + goDown;
-                        capsuleCollider.enabled = false;
-                        _isMoving = true;
-                        animator.SetFloat(Horizontal, 0f);
-                        animator.SetTrigger(TrStairDown);
-                    }
+                }
+                else if (_stairType.Equals("StairDown") &&
+                         (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)))
+                {
+                    Vector3 goDown = new Vector3(0f, -3f, 0f);
+                    _targetPosition = transform.position + goDown;
+                    capsuleCollider.enabled = false;
+                    _isMoving = true;
+                    animator.SetFloat(Horizontal, 0f);
+                    animator.SetTrigger(TrClimb);
+                }
+                else if (_stairType.Equals("StairDiagUp") &&
+                         (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
+                {
+                    Vector3 goUp = new Vector3(3.5f, 3f, 0f);
+                    _targetPosition = transform.position + goUp;
+                    capsuleCollider.enabled = false;
+                    _isMoving = true;
+                    animator.SetFloat(Horizontal, 0f);
+                    animator.SetTrigger(TrStairUp);
+                }
+                else if (_stairType.Equals("StairDiagDown") &&
+                         (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)))
+                {
+                    Vector3 goDown = new Vector3(-3.5f, -3f, 0f);
+                    _targetPosition = transform.position + goDown;
+                    capsuleCollider.enabled = false;
+                    _isMoving = true;
+                    animator.SetFloat(Horizontal, 0f);
+                    animator.SetTrigger(TrStairDown);
                 }
             }
         }
