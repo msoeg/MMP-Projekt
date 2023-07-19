@@ -5646,7 +5646,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 134064426, guid: 68778c56d854232498e381f0f7fcba9c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6580,7 +6580,7 @@ GameObject:
   - component: {fileID: 847884733}
   m_Layer: 0
   m_Name: Waschmachine_off
-  m_TagString: Untagged
+  m_TagString: Eventable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6686,7 +6686,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 75
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -8714,8 +8714,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   remainingTime: 
   timerDuration: 600
-  secondWall: {fileID: 0}
-  thirdWall: {fileID: 0}
+  secondWall: {fileID: 21300000, guid: 9cd2995305308c84589f62634a789da5, type: 3}
+  thirdWall: {fileID: 21300000, guid: acc71e379dcd58345a9f27bc8dbf1753, type: 3}
 --- !u!82 &1125683321
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14093,7 +14093,7 @@ GameObject:
   - component: {fileID: 1821380459}
   m_Layer: 0
   m_Name: Vase_
-  m_TagString: Untagged
+  m_TagString: Eventable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -44,12 +44,13 @@ public class Timer : MonoBehaviour
             _gongSound.Play(audioDelay);
         }
         if( wallpaperSprite != null && secondWall != null && thirdWall != null){
-            if(this.remainingTime.Contains("2:00"))
+            if(this.remainingTime.Contains("04:00"))
             {
-                Debug.Log("Mooiin");
+                Debug.Log("Wallpaper Change 1 - 2 a.m.");
                 wallpaperSprite.sprite = secondWall;
-            }else if(this.remainingTime.Contains("1:00"))
-            {
+            }else if(this.remainingTime.Contains("02:00"))
+            {   
+                Debug.Log("Wallpaper Change 2 - 4 a.m.");
                 wallpaperSprite.sprite = thirdWall;
             }
         }else{
