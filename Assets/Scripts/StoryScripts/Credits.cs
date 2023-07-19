@@ -61,7 +61,7 @@ public class Credits : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(9);
+            SceneManager.LoadScene(0);
         }
     }
 }
