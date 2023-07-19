@@ -36,6 +36,7 @@ public class HideInteraction : MonoBehaviour
             ResetPlayerMovement();
             _playerMovement.enabled = false;
             animator.SetTrigger("Default");
+            intText.text = "Leave [Space]";
 
         }else if(_currentTrigger != null && Input.GetKeyDown(KeyCode.Space) && isHidden)
         {
@@ -44,6 +45,7 @@ public class HideInteraction : MonoBehaviour
             playerRenderer.color = new Color(1f,1f,1f,1f);
             playerRenderer.sortingOrder = 100;
             playerRenderer.GetComponent<PlayerMovement>().enabled = true;
+            intText.text = "Hide [Space]";
         }
     }
 
