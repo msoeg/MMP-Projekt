@@ -7425,6 +7425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca64f6b5f778db245b7da5a689bba996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEventNum: 7
 --- !u!1 &901533710
 GameObject:
   m_ObjectHideFlags: 0
@@ -9786,9 +9787,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b03b6cf873f25cf42b5e0c3880b313ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTimeBeforeFirstEvent: 20
-  minSecondsBetweenEvents: 10
-  maxSecondsBetweenEvents: 30
+  waitTimeBeforeFirstEvent: 15
+  minSecondsBetweenEvents: 5
+  maxSecondsBetweenEvents: 20
 --- !u!4 &1258939837
 Transform:
   m_ObjectHideFlags: 0
