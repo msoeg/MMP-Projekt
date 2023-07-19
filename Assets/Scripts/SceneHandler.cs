@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneHandler : MonoBehaviour
 {
+    public int maxEventNum = 7;
     private int _playerHealth;
     private PlayerHealth _playerHealthObject;
     private Timer _timer;
@@ -30,7 +31,7 @@ public class SceneHandler : MonoBehaviour
         }
 
         _eventCount = _eventCounter.GetEventCount();
-        if (_eventCount >= 10)
+        if (_eventCount >= maxEventNum)
         {
             SceneManager.LoadScene("GameOver");
         }
